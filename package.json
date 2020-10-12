@@ -1,0 +1,22 @@
+{
+  "name": "426finalproject",
+  "version": "1.0.0",
+  "description": "## Proposal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chelene3/426FinalProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chelene3/426FinalProject/issues"
+  },
+  "homepage": "https://github.com/chelene3/426FinalProject#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.12"
+  }
+}
