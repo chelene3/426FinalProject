@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/chelene3/426FinalProject#readme",
   "dependencies": {
-    "browser-sync": "^2.26.12"
+    "browser-sync": "^2.26.12",
+    "bulma": "^0.9.1"
   }
 }
