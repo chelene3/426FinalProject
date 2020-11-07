@@ -1,5 +1,5 @@
 $(function () {
-    getCards(cardData);
+    getCards(database);
 })
 
 function getCards(cards) {

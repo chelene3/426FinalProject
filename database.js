@@ -27,6 +27,9 @@ const database = [
         rating: 4,
         price: 4,
         wifi: true,
+        des: "A Starbucks is always a good place to study. This one might be small but it;s a classic. ", 
+        hashtag1: "coffee",
+        hashtag2: "cornerclassic"
     },
     {
         id: 2,
@@ -42,6 +45,9 @@ const database = [
         rating: 5,
         price: 0,
         wifi: true,
+        des: "Classic study spot with lots of variety. Limited spots so sign up online beforehand! ",
+        hashtag1: "nofood",
+        hashtag2: "library"
     },
     {
         id: 3,
@@ -57,6 +63,9 @@ const database = [
         rating: 5,
         price: 0,
         wifi: true,
+        des: "Formally known as the Undergraduate Library, this is a classic place for an all-nighter. ", 
+        hashtag1: "nosleep",
+        hashtag2: "grindtime"
     },
     {
         id: 4,
@@ -72,6 +81,9 @@ const database = [
         rating: 5,
         price: 4,
         wifi: true,
+        des: "A classic place to study within the UNC Student Stores, or just grab a coffee between classes. ", 
+        hashtag1: "coffee",
+        hashtag2: "StudentStores"
     },
     {
         id: 5,
@@ -87,6 +99,9 @@ const database = [
         rating: 5,
         price: 3,
         wifi: true,
+        des: "This place might be a hike, but it's definitely worth it! FedEx has some great natural light and has a lot of great speakers. ", 
+        hashtag1: "buisnessy",
+        hashtag2: "brandnew"
     },
     {
         id: 6,
@@ -102,6 +117,9 @@ const database = [
         rating: 5,
         price: 3,
         wifi: true,
+        des: "A great place to study if you're looking for some smart STEM friends! ",
+        hashtag1: "medicine",
+        hashtag2: "science"
     },
     {
         id: 7,
@@ -117,6 +135,9 @@ const database = [
         rating: 5,
         price: 0,
         wifi: true,
+        des: "Why not study right next to the football stadium?! This is a smaller space but great for focusing. ", 
+        hashtag1: "centralcampus",
+        hashtag2: "focus"
     },
     {
         id: 8,
@@ -132,6 +153,9 @@ const database = [
         rating: 4,
         price: 0,
         wifi: true,
+        des: "This may be a bit of a drive but what is more perfect than a public library. Patrons young and old studying here! ", 
+        hashtag1: "publiclibrary",
+        hashtag2: "read"
     },
     {
         id: 9,
@@ -147,6 +171,9 @@ const database = [
         rating: 4,
         price: 5,
         wifi: true,
+        des: "New coffee shop on Franklin! Very cute and yummy coffee. Bustling so not great for quiet studying. ", 
+        hashtag1: "coffee",
+        hashtag2: "FranklinSt"
     },
     {
         id: 10,
@@ -162,6 +189,9 @@ const database = [
         rating: 4,
         price: 4,
         wifi: true,
+        des: "This is also a drive, but Honeysuckle has a great atmosphere for studying. Go with friends! ", 
+        hashtag1: "atmosphere",
+        hashtag2: "friends"
     },
     {
         id: 11,
@@ -177,6 +207,9 @@ const database = [
         rating: 4,
         price: 4,
         wifi: true,
+        des: "IDK about this so place so TO DO . ", 
+        hashtag1: "coffee",
+        hashtag2: "study"
     },
     {
         id: 11,
@@ -192,6 +225,9 @@ const database = [
         rating: 4,
         price: 4,
         wifi: true,
+        des: "IDK about this so place so TO DO . ", 
+        hashtag1: "coffee",
+        hashtag2: "study"
     },
     {
         id: 12,
@@ -207,6 +243,9 @@ const database = [
         rating: 4,
         price: 4,
         wifi: true,
+        des: "When you want to study in the middle of the trees and nature, come here! Perfect for a mild fall day . ", 
+        hashtag1: "nature",
+        hashtag2: "peaceful"
     },
     {
         id: 13,
@@ -222,5 +261,8 @@ const database = [
         rating: 4,
         price: 4,
         wifi: true,
+        des: "A combination of a bookstore and a coffee shop? Sign me up! Get a good book and a good cup of joe here! ", 
+        hashtag1: "books",
+        hashtag2: "cupofjoe"
     }
 ];
