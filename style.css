@@ -6,3 +6,12 @@
 #placecard{
     margin: 10px 10px;
 }
+
+#logo{
+    margin: -10px;
+    height: 200px
+}
+
+#small_logo{
+    height: 100px;
+}
