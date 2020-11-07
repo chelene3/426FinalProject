@@ -39,66 +39,12 @@
         </div>
     </section>
     <section class="section cards">
-        <div class="columns is-3 is-multiline">
-
-
-            <div class="card column is-3">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-left">
-                      <figure class="image is-48x48">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                      </figure>
-                    </div>
-                    <div class="media-content">
-                      <a href="mock_location_page.html"><p class="title is-4">Davis Library</p></a>
-                     <input type="range" name = "rating">
-                    </div>
-                  </div>
-              
-                  <div class="content">
-                    Classic study spot with lots of variety. Limited spots so sign up online beforehand!<a>@bulmaio</a>.
-                    <a href="#">#library</a> <a href="#">#noFood</a>
-                    <br>
-                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card column is-3">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-left">
-                      <figure class="image is-48x48">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                      </figure>
-                    </div>
-                    <div class="media-content">
-                      <p class="title is-4">Summit Coffee</p>
-                     <input type="range" name = "rating">
-                    </div>
-                  </div>
-              
-                  <div class="content">
-                    New coffee shop on Franklin! Very cute and yummy coffee. Bustling so not great for quiet studying<a>@bulmaio</a>.
-                    <a href="#">#coffee</a> <a href="#">#FranklinSt</a>
-                    <br>
-                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                  </div>
-                </div>
-              </div>
+        <div class="columns is-3 is-multiline is-centered" id="card_area">
+          <!-- Cards Rendered from Other Files to Here!-->
         </div>
     </section>
-    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="card_data.js"></script>
+    <script src="render_cards.js" type="module"></script>
 </body>
 </html>
