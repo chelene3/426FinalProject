@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,47 +9,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mock Location Page</title>
 </head>
+
 <body>
     <div>
-        <a href="index.html"><img id="small_logo" src="https://lh3.googleusercontent.com/XvE-Xpqbz2VeJjpnCQgsn_cA3v1ZXJKual7Z0XlWef4YOTK0C4DkgeWlMozuPs7ZUxCW1Clit7PhtM6fCo1LIe3c-u-Jt4p-POL0535mzdb_dOwr5-GoISDlRlmZIjGf7miHBv9nhv8=w2400"/></a>
+        <a href="index.html"><img id="small_logo"
+                src="https://lh3.googleusercontent.com/XvE-Xpqbz2VeJjpnCQgsn_cA3v1ZXJKual7Z0XlWef4YOTK0C4DkgeWlMozuPs7ZUxCW1Clit7PhtM6fCo1LIe3c-u-Jt4p-POL0535mzdb_dOwr5-GoISDlRlmZIjGf7miHBv9nhv8=w2400" /></a>
     </div>
     <section class="section has-background-info">
-        <div class="content has-text-centered"> 
-        <h1 class="has-text-info-light title-is-1">Davis Library</h1>
+        <div class="content has-text-centered">
+            <h1 class="has-text-info-light title-is-1">Davis Library</h1>
         </div>
     </section>
-    <p>This is the rough format for the pages that will appear when users click on a particular study location.</p>
-    <h2 class="has-background-info-light has-text-info-dark">Address</h2>
-    <p>208 Raleigh St, Chapel Hill, NC 27514</p>
-    <h2 class="has-background-info-light has-text-info-dark">Directions</h2>
-    <p>*insert image of directions from users current location*</p>
-    <img >
-    <h2 class="has-background-info-light has-text-info-dark">Hours</h2>
-    <table>
-        <thead>
-            <tr>Sunday</tr>
-            <tr>Monday</tr>
-            <tr>Tuesday</tr>
-            <tr>Wednesday</tr>
-            <tr>Thursday</tr>
-            <tr>Friday</tr>
-            <tr>Saturday</tr>
-        </thead>
-        <tbody>
-            <td>12AM - 5PM</td>
-            <td>10AM - 8PM</td>
-            <td>10AM - 8PM</td>
-            <td>10AM - 8PM</td>
-            <td>10AM - 8PM</td>
-            <td>10AM - 5PM</td>
-            <td>closed</td>
-        </tbody>
-    </table>
-    <h2 class="has-background-info-light has-text-info-dark">Covid-19 Procedures</h2>
-    <textarea>Covid-19 Procedures</textarea>
-    <h2 class="has-background-info-light has-text-info-dark">Overall Rating</h2>
-    <input type="range" id="rating" name="rating" min=1 max=5>
-    <h2 class="has-background-info-light has-text-info-dark">Productivity Rating</h2>
-    <input type="range" id="productivity" name="productivity" min=1 max=5>
+    <div class="columns">
+        <div class="column box" id="about">
+            <h1 class="title is-3" id="aboutspot">About this Study Spot</h1>
+            <h2 class="has-background-info-light has-text-info-dark">Address</h2>
+            <p>208 Raleigh St, Chapel Hill, NC 27514</p>
+            <h2 class="has-background-info-light has-text-info-dark">Directions</h2>
+            <p>*insert image of directions from users current location*</p>
+            <img>
+            <h2 class="has-background-info-light has-text-info-dark">Hours</h2>
+            <ul>
+                <li>Sunday:  12PM-5PM</li>
+                <li>Monday:  10AM-8PM</li>
+                <li>Tuesday:  10AM-8PM</li>
+                <li>Wednesday:  10AM-8PM</li>
+                <li>Thursday:  10AM-8PM</li>
+                <li>Friday:  10AM-5PM</li>
+                <li>Saturday:  closed</li>
+            </ul>
+            <h2 class="has-background-info-light has-text-info-dark">Covid-19 Procedures</h2>
+            <textarea>Covid-19 Procedures</textarea>
+            <h2 class="has-background-info-light has-text-info-dark">Average Overall Rating</h2>
+            <p>*.*/5.0</p>
+            <h2 class="has-background-info-light has-text-info-dark">Average Productivity Rating</h2>
+            <p>*.*/5.0</p>
+        </div>
+        <div class="column" id="feed">
+            <h1 class="title is-3" id="aboutspot">Activity Feed</h1>
+            <div class="box form">
+                <h4 class="title is-4">Add Your Feedback!</h4>
+                <div class="field">
+                    <label class="label">About your experience:</label>
+                    <div class="control">
+                      <textarea class="textarea" placeholder="Textarea"></textarea>
+                    </div>
+                </div>
+                <div class="control">
+                    <label class="label">Productivity Rating:</label>
+                    <div class="select">
+                      <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="control">
+                    <label class="label">Overall Rating:</label>
+                    <div class="select">
+                      <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                <div class="buttons is-right">
+                <button class="button is-info">Post</button>
+                </div>
+            </div>
+            <div class="box">
+                <p>previous post</p>
+            </div>
+            <div class="box">
+                <p>previous post</p>
+            </div>
+            <div class="box">
+                <p>previous post</p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
