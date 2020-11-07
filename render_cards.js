@@ -17,12 +17,11 @@ function makeCard(card_data) {
       <div class="media">
         <div class="media-left">
           <figure class="image is-48x48">
-            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+            <img src=${card_data.profilePic} alt="Placeholder image">
           </figure>
         </div>
         <div class="media-content">
           <a href="mock_location_page.html"><p class="title is-4">${card_data.name}</p></a>
-         <input type="range" name = "rating">
         </div>
       </div>
   
