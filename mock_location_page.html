@@ -7,43 +7,67 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mock Location Page</title>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k&callback=initMap&libraries=&v=weekly"
+          defer
+        ></script> -->
+        <script src="render_pages.js"></script>
 </head>
 <body>
     <section class="section has-background-info">
         <h1 class="has-text-info-light">Davis Library</h1>
     </section>
     <p>This is the rough format for the pages that will appear when users click on a particular study location.</p>
-    <h2 class="has-background-info-light has-text-info-dark">Address</h2>
-    <p>208 Raleigh St, Chapel Hill, NC 27514</p>
-    <h2 class="has-background-info-light has-text-info-dark">Directions</h2>
-    <p>*insert image of directions from users current location*</p>
-    <img >
-    <h2 class="has-background-info-light has-text-info-dark">Hours</h2>
-    <table>
-        <thead>
-            <tr>Sunday</tr>
-            <tr>Monday</tr>
-            <tr>Tuesday</tr>
-            <tr>Wednesday</tr>
-            <tr>Thursday</tr>
-            <tr>Friday</tr>
-            <tr>Saturday</tr>
-        </thead>
-        <tbody>
-            <td>12AM - 5PM</td>
-            <td>10AM - 8PM</td>
-            <td>10AM - 8PM</td>
-            <td>10AM - 8PM</td>
-            <td>10AM - 8PM</td>
-            <td>10AM - 5PM</td>
-            <td>closed</td>
-        </tbody>
-    </table>
-    <h2 class="has-background-info-light has-text-info-dark">Covid-19 Procedures</h2>
-    <textarea>Covid-19 Procedures</textarea>
-    <h2 class="has-background-info-light has-text-info-dark">Overall Rating</h2>
-    <input type="range" id="rating" name="rating" min=1 max=5>
-    <h2 class="has-background-info-light has-text-info-dark">Productivity Rating</h2>
-    <input type="range" id="productivity" name="productivity" min=1 max=5>
+    <section class="section ">
+        <h2 class="has-background-info-light has-text-info-dark">Address</h2>
+        <p>208 Raleigh St, Chapel Hill, NC 27514</p>
+        <div id="googleMap">
+            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=12&center=35.9132%2C-79.0558&key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k" allowfullscreen></iframe>
+            <div id="map"></div>
+        </div>
+
+        <h2 class="has-background-info-light has-text-info-dark">Directions</h2>
+        
+     
+        <p>*insert image of directions from users current location*</p>
+        <img >
+        <h2 class="has-background-info-light has-text-info-dark">Hours</h2>
+        <table>
+            <thead>
+                <tr>Sunday</tr>
+                <tr>Monday</tr>
+                <tr>Tuesday</tr>
+                <tr>Wednesday</tr>
+                <tr>Thursday</tr>
+                <tr>Friday</tr>
+                <tr>Saturday</tr>
+            </thead>
+            <tbody>
+                <td>12AM - 5PM</td>
+                <td>10AM - 8PM</td>
+                <td>10AM - 8PM</td>
+                <td>10AM - 8PM</td>
+                <td>10AM - 8PM</td>
+                <td>10AM - 5PM</td>
+                <td>closed</td>
+            </tbody>
+        </table>
+    </section>  
+    <section class="section">
+        <h2 class="has-background-info-light has-text-info-dark">Covid-19 Procedures</h2>
+        <textarea>Covid-19 Procedures</textarea>
+        <h2 class="has-background-info-light has-text-info-dark">Overall Rating</h2>
+        <input type="range" id="rating" name="rating" min=1 max=5>
+        <h2 class="has-background-info-light has-text-info-dark">Productivity Rating</h2>
+        <input type="range" id="productivity" name="productivity" min=1 max=5>
+    </section>
+    
+    <section class="section">
+        <h2 class="has-background-info-light has-text-info-dark">Reviews</h2>
+        <div>
+
+        </div>
+    </section>
 </body>
 </html>
