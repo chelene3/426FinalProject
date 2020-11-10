@@ -236,7 +236,7 @@ const database = [
         hashtag1: "coffee",
         hashtag2: "study",
         profilePic: "https://pbs.twimg.com/profile_images/729702200293900288/rzXTMaFd_400x400.jpg", 
-        coverPic: "https://lh3.googleusercontent.com/proxy/pBv31CjqbG1x1JknP1jzVtqbRG_fI2W-A8-Y121bAq9bWfv0xqqH1DSL36RFyQjV58Escsm-fGdzjI6_3_IUbIe1ux1AikqEqtxKqUXp0zQS1oMYVH9CR0UIcBYdHMxa-K5KwmBTVyIcdhGGkRajYQ"
+        coverPic: "https://lh3.googleusercontent.com/proxy/x8O2UBl_-PM60elDaF3Fktb0IdAZ1n2JmDWjhOfkUnE2nOsr0E_aX1gS3fHX0ALV-vFHmaY5FL62lKqCQfEZxZeffIUTsPa4zWlzSvU5XG_fACUD8DXbGiF83v2sJyGbrpjNESx5A6p9V2z3OPIMqg"
     },
     {
         id: 12,
