@@ -335,5 +335,43 @@ const database = [
         hashtag2: "bagels",
         profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfYxL4kp_-HZs9UfWSvWXKJmCXc1J_8GgYSA&usqp=CAU", 
         coverPic: "https://carolinaunion.unc.edu/sites/carolinaunion.unc.edu/files/styles/adaptive/public/feature_images/20200513_FrontofUnion-2.jpg?itok=nBUFk04V"
+    }, {
+        id: 17,
+        name: "Cha House",
+        addr: "318 W Franklin St, Chapel Hill, NC 27516",
+        lat: 0,
+        long: 0,
+        dinein: true,
+        takeout: true,
+        indoorseats: true,
+        outdoorseats: true,
+        noise: 3,
+        rating: 4,
+        price: 3,
+        wifi: true,
+        des: "A great place to study inside or out, and grab a great tea to sip on while you're at it! ", 
+        hashtag1: "boba",
+        hashtag2: "tea",
+        profilePic: "https://www.chahouseusa.com/wp-content/uploads/2019/01/chahouselogo-pink-bird.png", 
+        coverPic: "https://s3-media0.fl.yelpcdn.com/bphoto/LC3YHjMs7QWjmP6tbqDNCA/l.jpg"
+    }, {
+        id: 18,
+        name: "Carolina Coffee Shop",
+        addr: "138 E Franklin St, Chapel Hill, NC 27514",
+        lat: 0,
+        long: 0,
+        dinein: true,
+        takeout: true,
+        indoorseats: true,
+        outdoorseats: true,
+        noise: 4,
+        rating: 3,
+        price: 4,
+        wifi: true,
+        des: "This is more of a place for eating, but if you would like to study alone or with one other person, feel free to sit at the bar for a bit and grab a great coffee. ", 
+        hashtag1: "classic",
+        hashtag2: "CCS",
+        profilePic: "https://images.squarespace-cdn.com/content/521b6de9e4b03aa034dec5dc/1520905572788-EED1J7TKC3W7T6J6GUAM/carolinacoffeeshop-logo-v1-reverse.png?content-type=image%2Fpng", 
+        coverPic: "https://images.squarespace-cdn.com/content/v1/521b6de9e4b03aa034dec5dc/1597009876899-F4NXXL6EYQ153E9VZVG2/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/Front.jpeg?format=1500w"
     }
 ];
