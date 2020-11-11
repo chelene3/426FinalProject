@@ -8,6 +8,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mock Location Page</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <script src="render_pages.js"></script>
 </head>
 
 <body>
@@ -25,6 +30,14 @@
             <h1 class="title is-3" id="aboutspot">About this Study Spot</h1>
             <h2 class="has-background-info-light has-text-info-dark">Address</h2>
             <p>208 Raleigh St, Chapel Hill, NC 27514</p>
+            <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJp35uIRzDrIkRy-RDBOC6A38&key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k" allowfullscreen></iframe> -->
+            <iframe
+            width="450"
+            height="250"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k&q=103 E Franklin St, Chapel Hill, NC 27514" allowfullscreen>
+          </iframe>
+            <div id="map"></div>
             <h2 class="has-background-info-light has-text-info-dark">Directions</h2>
             <p>*insert image of directions from users current location*</p>
             <img>
