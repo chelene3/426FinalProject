@@ -236,7 +236,7 @@ const database = [
         hashtag1: "coffee",
         hashtag2: "study",
         profilePic: "https://pbs.twimg.com/profile_images/729702200293900288/rzXTMaFd_400x400.jpg", 
-        coverPic: "https://lh3.googleusercontent.com/proxy/x8O2UBl_-PM60elDaF3Fktb0IdAZ1n2JmDWjhOfkUnE2nOsr0E_aX1gS3fHX0ALV-vFHmaY5FL62lKqCQfEZxZeffIUTsPa4zWlzSvU5XG_fACUD8DXbGiF83v2sJyGbrpjNESx5A6p9V2z3OPIMqg"
+        coverPic: "https://media-cdn.tripadvisor.com/media/photo-s/0d/1d/b0/7b/inside-outside-seating.jpg"
     },
     {
         id: 12,
