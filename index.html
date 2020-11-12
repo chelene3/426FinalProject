@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k&callback=initMap&libraries=places&v=weekly"
+    defer
+    ></script> -->
     <title>Home</title>
 </head>
 <body>
@@ -19,20 +23,27 @@
             <div class="content has-text-centered"> 
                 <img id="logo" src="https://lh3.googleusercontent.com/JxsJKfN0Zo_DCkmCF3qrdI4S1NAePWRoEwfhwoL_ww_AhtN7Rfy5SrlRRrLQZMxQ2x9Qmy8J8IQC-LM7OwBXCAfXg5Omb8GrQkLfcT4Bg1fFkmJwTx6l04y1LFyVMo0xYBiRh6dxT4Y=w2400"/>
 
-                <form>
+                <!-- <form> -->
                     <div class="field">
                         <label class="label">Search for a study spot:</label>
+                        <div class="ui-widget" id="auto">
+                            <input id="searchText" class="input" type="text" placeholder="awesome study spot" name="username" autocomplete="off">
+                        </div>
                         <div class="control">
-                            <input class="input" type="text" placeholder="awesome study spot" name="username">
+                            <br>
+                            <button class="button" id="homesearch">Search</button>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Or find one near you!</label>
                         <div class="control">
-                            <button class="button is-dark" >Search Nearby</button>
+                            <button class="button is-dark" onClick="addMap()" >Search Nearby</button>
                         </div>
                     </div>
-                </form>
+                <!-- </form> -->
+                <div id="map">
+                   
+                </div>
             </div>
          
         </div>
@@ -43,8 +54,11 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="card_data.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet"></link>
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script> 
+    <!-- <script src="card_data.js"></script> -->
     <script src="database.js"></script>
     <script src="render_cards.js" type="module"></script>
+    <script src="home.js"></script>
 </body>
 </html>
