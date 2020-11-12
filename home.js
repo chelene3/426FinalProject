@@ -14,6 +14,32 @@ function addMap(){
     $('#map').append(map);
 }
 
+$ (function () {
+  var availableTags = [
+    "Starbucks",
+    "Davis Library",
+    "Robert B. House Undergraduate Library",
+    "Stone and Leaf Cafe",
+    "Fedex Center",
+    "Health Science Library",
+    "Stone Library",
+    "Chapel Hill Public Library",
+    "Summit Franklin",
+    "Honeysuckle Cafe and Bar",
+    "Coco Bean Coffee Shop",
+    "Johnny's Gone Fishing ",
+    "Cafe Driade",
+    "Epilogue Books Chocolate Brews",
+    "Wilson Library",
+    "Carolina Union",
+    "Cha House",
+    "Carolina Coffee Shop"
+  ];
+  $("#searchText").autocomplete ({
+    source: availableTags,
+    appendTo: "#auto"
+  });
+});
 //add function for autocomplete widget in home page
 
 
