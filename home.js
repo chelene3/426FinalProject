@@ -13,3 +13,12 @@ function addMap(){
   </iframe>`;
     $('#map').append(map);
 }
+
+
+// https://www.geeksforgeeks.org/login-form-using-node-js-and-mongodb/
+// this website gives a step by step for login, uses mongodb for database of users
+
+
+// https://codeshack.io/basic-login-system-nodejs-express-mysql/
+// this website gives a step by step for login, uses msql
+
