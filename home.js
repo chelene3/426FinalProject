@@ -14,6 +14,8 @@ function addMap(){
     $('#map').append(map);
 }
 
+//add function for autocomplete widget in home page
+
 
 // https://www.geeksforgeeks.org/login-form-using-node-js-and-mongodb/
 // this website gives a step by step for login, uses mongodb for database of users
