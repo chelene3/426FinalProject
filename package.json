@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/chelene3/426FinalProject#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "browser-sync": "^2.26.12",
-    "bulma": "^0.9.1"
+    "bulma": "^0.9.1",
+    "data-store": "^4.0.3",
+    "express": "^4.17.1"
   }
 }
