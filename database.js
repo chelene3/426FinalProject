@@ -136,7 +136,7 @@ const database = [
         hashtag1: "medicine",
         hashtag2: "science",
         profilePic: "https://pbs.twimg.com/profile_images/1115998274564108294/aUwa5l5E.png", 
-        coverPic: "https://cms.concept3d.com/map/lib/image-cache/i.php?mapId=111&image=111/unc-chapel-hill-health-science-library.jpg&w=900&h=508&r=1"
+        coverPic: "https://pbs.twimg.com/profile_images/453245534640160768/uOQYFHzY.jpeg"
     },
     {
         id: 7,
