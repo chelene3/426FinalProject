@@ -1,6 +1,6 @@
-// $(function(){
-
-// });
+$(function(){
+  registerSearchButton();
+});
 
 function addMap(){
     $('#searchMap').remove();
@@ -40,8 +40,16 @@ $ (function () {
     appendTo: "#auto"
   });
 });
-//add function for autocomplete widget in home page
 
+const registerSearchButton = function () {
+  document.querySelectorAll("#homesearch").forEach(item => {
+      item.addEventListener("click", handleSearchButtonPress);
+  })
+}
+
+const handleSearchButtonPress = function (event) {
+  window.location.href="mock_location_page.html";
+};
 
 // https://www.geeksforgeeks.org/login-form-using-node-js-and-mongodb/
 // this website gives a step by step for login, uses mongodb for database of users
