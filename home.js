@@ -49,6 +49,7 @@ const registerSearchButton = function () {
 
 const handleSearchButtonPress = function (event) {
   window.location.href="mock_location_page.html";
+  //TO DO LINK TO SPECIFIC PAGE RATHER THAN JUST MOCK LOCATION PAGE
 };
 
 // https://www.geeksforgeeks.org/login-form-using-node-js-and-mongodb/
