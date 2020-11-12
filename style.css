@@ -27,3 +27,28 @@
 #feed {
     margin: 15px
 }
+
+#auto {
+    display: block;
+    position: relative;
+}
+
+.ui-menu .ui-menu-item a{
+    border: 1px solid;
+    margin: 10px;
+}
+
+ul.ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    display: none;
+    min-width: 160px;
+    margin: 0 0 10px 25px;
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+}
