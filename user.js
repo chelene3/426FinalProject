@@ -39,7 +39,7 @@ User.findByID = (id) => {
     return null;
 }
 
-User.next_id = Secret.getAllIDs().reduce((max, next_id) => {
+User.next_id = User.getAllIDs().reduce((max, next_id) => {
     if (max < next_id) {
         return next_id;
     }
