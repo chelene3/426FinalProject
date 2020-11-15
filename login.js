@@ -12,7 +12,8 @@ app.use(expressSession({
   username: "studyBuddyGroup",
   password: "hotsauce",
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  secret: cookie_secret
 }));
 
 const user_data = require('data-store')({ path: process.cwd() + '/data/users.json' });

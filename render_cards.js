@@ -1,11 +1,30 @@
 $(function () {
-  getCards(database);
-  //get all cards ids
+
+    // getCards(database);
+    allCardsID();
 })
 
-function getCards(cards) {
-  cards.forEach(makeCard)
-  //get for each id 
+// allCards();
+async function allCardsID(){
+  const result = await axios({
+    method: 'get',
+    url: 'http://localhost:3000/location/',
+  });
+  getCards(result.data);
+}
+
+async function getCards(cardIDs) {
+    cardIDs.forEach(getData);
+    // cards.forEach(makeCard)
+}
+
+async function getData(id){
+  const result = await axios({
+    method: 'get',
+    url: `http://localhost:3000/location/${id}`,
+  });
+  makeCard(result.data);
+
 }
 
 function makeCard(card_data) {
