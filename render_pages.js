@@ -74,6 +74,11 @@ const location1 = async  (num) =>{
       frameborder="0" style="border:0"
       src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k&q=${res.data.address}" allowfullscreen>
       </iframe>`)
+      $('#desc').append(`<p>${res.data.des}</p>`)
+      $('#covid').append(`<p>${res.data.covid}</p>`)
+
+      //append all posts for this location to the feed 
+      $('#feed').append(`<div class="box"><p>${res.data.posts[0]}</p></div>`)
 
 
     }catch(err){

@@ -47,10 +47,9 @@ function makeCard(card_data) {
       </div>
   
       <div class="content">
-        ${card_data.des}<a>@bulmaio</a>.
+        ${card_data.des}
         <a href="#">#${card_data.hashtags[0]}</a> <a href="#">#${card_data.hashtags[1]}</a>
         <br>
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
       </div>
     </div>
     <div>
