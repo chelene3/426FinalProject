@@ -27,7 +27,7 @@ $ (function () {
     "Summit Franklin",
     "Honeysuckle Cafe and Bar",
     "Coco Bean Coffee Shop",
-    "Johnny's Gone Fishing ",
+    "Johnny's Gone Fishing",
     "Cafe Driade",
     "Epilogue Books Chocolate Brews",
     "Wilson Library",
