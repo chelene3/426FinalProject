@@ -1,4 +1,5 @@
 $(function () {
+
     // getCards(database);
     allCardsID();
 })
@@ -23,10 +24,11 @@ async function getData(id){
     url: `http://localhost:3000/location/${id}`,
   });
   makeCard(result.data);
+
 }
 
 function makeCard(card_data) {
-    $("#card_area").append(`<div class="card column is-3" id="placecard">
+  $("#card_area").append(`<div class="card column is-3" id="placecard">
     <div class="card-image">
       <figure class="image is-4by3">
         <img src=${card_data.coverPic} alt="Placeholder image">
@@ -40,7 +42,7 @@ function makeCard(card_data) {
           </figure>
         </div>
         <div class="media-content">
-          <a href="mock_location_page.html"><p class="title is-4">${card_data.name}</p></a>
+          <p class="title is-4" onclick="alertFunc(this.id)" id=${card_data.id}>${card_data.name}</p>
         </div>
       </div>
   
@@ -50,6 +52,13 @@ function makeCard(card_data) {
         <br>
         <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
       </div>
+    </div>
+    <div>
+    <script>
+      function alertFunc(e) {
+        window.location.href = "mock_location_page.html?name=" + e
+      }
+    </script>
     </div>
   </div>`)
 }
