@@ -19,7 +19,7 @@ class User {
     }
 }
 
-User.getALLIDs = () => {
+User.getAllIDs = () => {
     //return array of all user ids
     return Object.keys(user_data.data).map((id=> {return parseInt(id);}));
 }
