@@ -8,8 +8,14 @@ const Location = require('./location.js');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+app.use(function(req,res,next){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+})
 
 app.get('/location', (req, res)=>{
+    // res.header("Access-Control-Allow-Origin", "*");
     res.json(Location.getALLIDs());
     return;
 });
@@ -25,9 +31,9 @@ app.get('/location/:id',(req, res)=> {
 });
 
 app.post('/location', (req, res) => {
-    let {name, address ,lat, long} = req.body;
+    let {name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, hashtags, profilePic, coverPic, posts} = req.body;
 
-    let l = Location.create(name, address, lat, long);
+    let l = Location.create(name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, hashtags, profilePic, coverPic, posts);
     if(l == null){
         res.status(400).send("Bad request");
         return;
@@ -43,11 +49,24 @@ app.put('/location/:id', (req,res)=> {
         return;
     }
     
-    let {name, address ,lat, long} = req.body;
+    let {name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, hashtags, profilePic, coverPic, posts} = req.body;
     l.name = name;
     l.address = address;
     l.lat = lat;
     l.long = long;
+    l.dinein = dinein;
+    l.takeout = takeout; 
+    l.indoorseats = indoorseats;
+    l.outdoorseats = outdoorseats;
+    l.noise = noise;
+    l.rating = rating;
+    l.price = price;
+    l.wifi = wifi;
+    l.des = des;
+    l.hashtags = hashtags; 
+    l.profilePic = profilePic;
+    l.coverPic = coverPic;
+    l.posts = posts;
 
     l.update();
 
@@ -64,7 +83,7 @@ app.delete('/location/:id', (req, res) => {
     l.delete();
     res.json(true);
 });
-const port = 3030;
+const port = 3000;
 
 app.listen(port, ()=>{
     console.log("app running on port " + port);
