@@ -1,7 +1,7 @@
 const location_data = require('data-store')({path:process.cwd() + '/data/location.json'});
 
 class Location {
-    constructor(id, name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, hashtags, profilePic, coverPic, posts ){
+    constructor(id, name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, covid, hashtags, profilePic, coverPic, posts ){
         this.id=id;
         this.name= name;
         this.address = address;
@@ -16,6 +16,7 @@ class Location {
         this.price = price;
         this.wifi = wifi;
         this.des = des;
+        this.covid = covid;
         this.hashtags = hashtags;
         this.profilePic = profilePic;
         this.coverPic = coverPic;
@@ -39,7 +40,7 @@ Location.getALLIDs = () => {
 Location.findByID = (id) =>{
     let ldata =  location_data.get(id);
     if(ldata != null){
-        return new Location(ldata.id, ldata.name, ldata.address, ldata.lat, ldata.long, ldata.dinein, ldata.takeout, ldata.indoorseats, ldata.outdoorseats, ldata.noise, ldata.rating, ldata.price, ldata.wifi, ldata.des, ldata.hashtags, ldata.profilePic, ldata.coverPic, ldata.posts);
+        return new Location(ldata.id, ldata.name, ldata.address, ldata.lat, ldata.long, ldata.dinein, ldata.takeout, ldata.indoorseats, ldata.outdoorseats, ldata.noise, ldata.rating, ldata.price, ldata.wifi, ldata.des, ldata.covid, ldata.hashtags, ldata.profilePic, ldata.coverPic, ldata.posts);
     }
    return null;
 }
@@ -51,10 +52,10 @@ Location.next_id =  Location.getALLIDs().reduce((max, next_id) => {
     return max;
 }, -1) +1;
 
-Location.create = (name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, hashtags, profilePic, coverPic, posts) => {
+Location.create = (name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, covid, hashtags, profilePic, coverPic, posts) => {
     let id = Location.next_id;
     Location.next_id +=1;
-    let l = new Location(id, name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, hashtags, profilePic, coverPic, posts);
+    let l = new Location(id, name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, covid, hashtags, profilePic, coverPic, posts);
     location_data.set(id.toString(), l);
     return l;
 }
