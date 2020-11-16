@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mock Location Page</title>
+    <title>Location Page</title>
     <!-- <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k&callback=initMap&libraries=places&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k&callback=initMap&libraries=&v=weekly"
       defer
     ></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -24,42 +24,39 @@
     </div>
     <section class="section has-background-info">
         <div class="content has-text-centered">
-            <h1 class="has-text-info-light title-is-1" id="mainTitle"></h1>
+            <h1 id="title" class="has-text-info-light title-is-1"></h1>
         </div>
     </section>
     <div class="columns">
         <div class="column box" id="about">
             <h1 class="title is-3" id="aboutspot">About this Study Spot</h1>
             <h2 class="has-background-info-light has-text-info-dark">Address</h2>
-            <p id="address"></p>
-            <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJp35uIRzDrIkRy-RDBOC6A38&key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k" allowfullscreen></iframe> -->
-
-            <div id="map">
-
-            </div>
-            <div id="test"></div>
-            <h2 class="has-background-info-light has-text-info-dark">Hours</h2>
+            <p id="addr"></p>
+            <iframe id="map"
+            width="450"
+            height="250"
+            frameborder="0" style="border:0"
+            src="" allowfullscreen>
+          </iframe>
+            <h2 class="has-background-info-light has-text-info-dark">Directions</h2>
+            <p id="directions">*insert image of directions from users current location*</p>
+            <img>
+            <h2 id="hours" class="has-background-info-light has-text-info-dark">Hours</h2>
             <ul>
-                <li>Sunday:  12PM-5PM</li>
-                <li>Monday:  10AM-8PM</li>
-                <li>Tuesday:  10AM-8PM</li>
-                <li>Wednesday:  10AM-8PM</li>
-                <li>Thursday:  10AM-8PM</li>
-                <li>Friday:  10AM-5PM</li>
-                <li>Saturday:  closed</li>
+                <li id="sun">Sunday:  </li>
+                <li id="mon">Monday:  </li>
+                <li id="tues">Tuesday:  </li>
+                <li id="wed">Wednesday:  </li>
+                <li id="thurs">Thursday:  </li>
+                <li id="fri">Friday:  </li>
+                <li id="sat">Saturday:  </li>
             </ul>
-            <h2 class="has-background-info-light has-text-info-dark">Description</h2>
-            <div id="desc"></div>
             <h2 class="has-background-info-light has-text-info-dark">Covid-19 Procedures</h2>
-            <div id="covid"></div>
-            <h2 class="has-background-info-light has-text-info-dark">Noise Rating</h2>
-            <div id="noise"></div>
-            <h2 class="has-background-info-light has-text-info-dark">Productivity Rating</h2>
-            <div id="prod"></div>
-            <h2 class="has-background-info-light has-text-info-dark">Price Rating</h2>
-            <div id="price"></div>
+            <textarea id="covid">Covid-19 Procedures</textarea>
             <h2 class="has-background-info-light has-text-info-dark">Average Overall Rating</h2>
-            <div id="rate"></div>
+            <p id="rate">*.*/5.0</p>
+            <h2 class="has-background-info-light has-text-info-dark">Average Productivity Rating</h2>
+            <p id="productive">*.*/5.0</p>
         </div>
         <div class="column" id="feed">
             <h1 class="title is-3" id="aboutspot">Activity Feed</h1>
@@ -68,7 +65,7 @@
                 <div class="field">
                     <label class="label">About your experience:</label>
                     <div class="control">
-                      <textarea class="textarea" placeholder="Textarea"></textarea>
+                      <textarea id="feedback" class="textarea" placeholder="Textarea"></textarea>
                     </div>
                 </div>
                 <div class="control">
@@ -98,8 +95,17 @@
                     </div>
                   </div>
                 <div class="buttons is-right">
-                <button class="button is-info">Post</button>
+                <button id="postbtn" class="button is-info">Post</button>
                 </div>
+            </div>
+            <div class="box">
+                <p>previous post</p>
+            </div>
+            <div class="box">
+                <p>previous post</p>
+            </div>
+            <div class="box">
+                <p>previous post</p>
             </div>
         </div>
     </div>
