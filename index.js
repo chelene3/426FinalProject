@@ -31,9 +31,9 @@ app.get('/location/:id',(req, res)=> {
 });
 
 app.post('/location', (req, res) => {
-    let {name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, hashtags, profilePic, coverPic, posts} = req.body;
+    let {name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, covid, hashtags, profilePic, coverPic, posts} = req.body;
 
-    let l = Location.create(name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, hashtags, profilePic, coverPic, posts);
+    let l = Location.create(name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, covid, hashtags, profilePic, coverPic, posts);
     if(l == null){
         res.status(400).send("Bad request");
         return;
@@ -49,7 +49,7 @@ app.put('/location/:id', (req,res)=> {
         return;
     }
     
-    let {name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, hashtags, profilePic, coverPic, posts} = req.body;
+    let {name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, covid, hashtags, profilePic, coverPic, posts} = req.body;
     l.name = name;
     l.address = address;
     l.lat = lat;
@@ -63,6 +63,7 @@ app.put('/location/:id', (req,res)=> {
     l.price = price;
     l.wifi = wifi;
     l.des = des;
+    l.covid = covid;
     l.hashtags = hashtags; 
     l.profilePic = profilePic;
     l.coverPic = coverPic;
