@@ -150,7 +150,6 @@ const Secret= require("./secret.js");
 const login_data = require('data-store')({ path: process.cwd() + '/data/users.json' });
 
 app.post('/login', (req,res) => {
-
     let user = req.body.username;
     let password = req.body.password;
 
@@ -259,7 +258,7 @@ app.delete('/secret/:id', (req, res) => {
     res.json(true);
 })
 
-const port = 3030;
+const port = 3000;
 app.listen(port, () => {
     console.log("User Login Example up and running on port " + port);
 });

@@ -6,6 +6,12 @@
     <title>Login</title>
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet"></link>
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="login.js" type="module"></script>
+    <script src="user_login.js" type="module"></script>
 </head>
 
 
@@ -25,13 +31,13 @@
             <div class="field">
                 <label class="label">Username</label>
                 <div class="control">
-                    <input class="input" type="text" placeholder="Cookie Monster 2.0" name="username">
+                    <input class="input" type="text" placeholder="Cookie Monster 2.0" name="username" id="user-old-input">
                 </div>
             </div>
             <div class="field">
                 <label class="label">Password</label>
                 <div class="control">
-                    <input class="input" type="password" placeholder="password12345">
+                    <input class="input" type="password" placeholder="password12345" id="password-old-input">
                 </div>
             </div>
             <div class="field">
