@@ -69,7 +69,7 @@
     "price": 0,
     "wifi": true,
     "des": "Formally known as the Undergraduate Library, this is a classic place for an all-nighter. ",
-    "covid": "TO DO",
+    "covid": "The UL is currently CLOSED due to Covid-19",
     "hashtags": [
       "nosleep",
       "grindtime"
@@ -117,7 +117,7 @@
     "price": 3,
     "wifi": true,
     "des": "This place might be a hike, but it's definitely worth it! FedEx has some great natural light and has a lot of great speakers. ",
-    "covid": "TO DO",
+    "covid": "Still open but closes before 5.",
     "hashtags": [
       "businessy",
       "modern"
@@ -141,7 +141,7 @@
     "price": 3,
     "wifi": true,
     "des": "A great place to study if you're looking for some smart STEM friends! ",
-    "covid": "TO DO",
+    "covid": "Open on the first floor, second floor, and lower level. Masks must be worn at all times.",
     "hashtags": [
       "medicine",
       "science"
@@ -165,7 +165,7 @@
     "price": 0,
     "wifi": true,
     "des": "Why not study right next to the football stadium?! This is a smaller space but great for focusing. ",
-    "covid": "TO DO",
+    "covid": "The Stone Library is currently closed due to Covid-19",
     "hashtags": [
       "centralcapus",
       "focus"
@@ -237,7 +237,7 @@
     "price": 4,
     "wifi": true,
     "des": "This is also a drive, but Honeysuckle has a great atmosphere for studying. Go with friends! ",
-    "covid": "TO DO",
+    "covid": "Open for takeout and dine-in with limited seating capacity inside. Masks are required when inside but there is a spacious open-air patio and garden area outside. Full menu still being offered. ",
     "hashtags": [
       "atmosphere",
       "friends"
@@ -261,7 +261,7 @@
     "price": 4,
     "wifi": true,
     "des": "Great coffee with great employees! Supports local businesses, which is always a plus.",
-    "covid": "TO DO",
+    "covid": "You can only order coffee at a a walkup window. No availability to sit inside currently. ",
     "hashtags": [
       "coffee",
       "study"
@@ -285,7 +285,7 @@
     "price": 4,
     "wifi": true,
     "des": "Great indoor and outdoor seating! When you're feeling homesick, Johnny's has a great homey atmosphere:)",
-    "covid": "TO DO",
+    "covid": "Open for pick-up and delivery. Can sit outside in newly revamped outdoor area. Masks must be worn when sitting close to other individuals.",
     "hashtags": [
       "coffee",
       "study"
@@ -333,7 +333,7 @@
     "price": 4,
     "wifi": true,
     "des": "A combination of a bookstore and a coffee shop? Sign me up! Get a good book and a good cup of joe here! ",
-    "covid": "TO DO",
+    "covid": "Open for socially disstanced outdoor and indoor seating for a maximum of 2 hours with a purchase. Also open for takeout or delivery ordres.",
     "hashtags": [
       "nature",
       "peaceful"
@@ -357,7 +357,7 @@
     "price": 0,
     "wifi": true,
     "des": "The quietest of quiet places to study on campus. Don't open your backpack too loudly here. ",
-    "covid": "TO DO",
+    "covid": "Wilson Library is currently closed due to Covid-19",
     "hashtags": [
       "silence",
       "harrypotter"
@@ -405,7 +405,7 @@
     "price": 3,
     "wifi": true,
     "des": "A great place to study inside or out, and grab a great tea to sip on while you're at it! ",
-    "covid": "TO DO",
+    "covid": "Only a couple of tables inside, but room to spread out outside with tables along Franklin St.",
     "hashtags": [
       "boba",
       "tea"
@@ -429,7 +429,7 @@
     "price": 4,
     "wifi": true,
     "des": "This is more of a place for eating, but if you would like to study alone or with one other person, feel free to sit at the bar for a bit and grab a great coffee. ",
-    "covid": "TO DO",
+    "covid": "Open for takeout and dine-in with limited seating inside.",
     "hashtags": [
       "classic",
       "ccs"
