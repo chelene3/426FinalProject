@@ -67,19 +67,22 @@ const location1 = async  (num) =>{
         console.log(res.data);
 
       $('#mainTitle').append(`<p>${res.data.name}</p>`);
-      $('#address').append(`<p>${res.data.address}</p>`)
+      $('#address').append(`<p>${res.data.address}</p>`);
       $('#map').append(`<iframe
       width="450"
       height="250"
       frameborder="0" style="border:0"
       src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k&q=${res.data.address}" allowfullscreen>
-      </iframe>`)
-      $('#desc').append(`<p>${res.data.des}</p>`)
-      $('#covid').append(`<p>${res.data.covid}</p>`)
+      </iframe>`);
+      $('#desc').append(`<p>${res.data.des}</p>`);
+      $('#covid').append(`<p>${res.data.covid}</p>`);
 
       //append all posts for this location to the feed 
-      $('#feed').append(`<div class="box"><p>${res.data.posts[0]}</p></div>`)
-
+      $('#feed').append(`<div class="box"><p>${res.data.posts[0]}</p></div>`);
+      $('#rate').append(`<div class="box"><p>${res.data.rating}/5.0</p></div>`);
+      $('#prod').append(`<div class="box"><p>${res.data.prod}/5.0</p></div>`);
+      $('#noise').append(`<div class="box"><p>${res.data.noise}/5.0</p></div>`);
+      $('#price').append(`<div class="box"><p>${res.data.noise}/5.0</p></div>`);
 
     }catch(err){
         console.error(err);
