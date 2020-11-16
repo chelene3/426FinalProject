@@ -9,6 +9,7 @@
   "1": {
     "id": 1,
     "name": "Starbucks",
+    "address": "103 E Franklin St, Chapel Hill, NC 27514",
     "lat": 35.91341,
     "long": -79.0556,
     "dinein": false,
@@ -31,6 +32,7 @@
   "2": {
     "id": 2,
     "name": "Davis Library",
+    "address": "208 Raleigh St, Chapel Hill, NC 27514",
     "lat": 35.910969,
     "long": -79.047913,
     "dinein": false,
@@ -53,6 +55,7 @@
   "3": {
     "id": 3,
     "name": "Robert B. House Undergraduate Library",
+    "address": "203 South Rd #3942, Chapel Hill, NC 27599",
     "lat": 35.90942,
     "long": -79.04864,
     "dinein": false,
@@ -75,6 +78,7 @@
   "4": {
     "id": 4,
     "name": "Stone and Leaf Café ",
+    "address": "207 South Rd, Chapel Hill, NC 27599",
     "lat": 35.909821,
     "long": -79.047234,
     "dinein": true,
@@ -97,6 +101,7 @@
   "5": {
     "id": 5,
     "name": "Fedex Center",
+    "address": "301 Pittsboro Street Chapel Hill, NC 27516",
     "lat": 35.90711,
     "long": -79.05424,
     "dinein": true,
@@ -119,6 +124,7 @@
   "6": {
     "id": 6,
     "name": "Health Science Library",
+    "address": "335 S Columbia St, Chapel Hill, NC 27599",
     "lat": 35.90561,
     "long": -79.05267,
     "dinein": true,
@@ -141,6 +147,7 @@
   "7": {
     "id": 7,
     "name": "Stone Library",
+    "address": "Hanes Art Center, 121 E Cameron Ave, Chapel Hill, NC 27514",
     "lat": 35.9124,
     "long": -79.05439,
     "dinein": false,
@@ -163,6 +170,7 @@
   "8": {
     "id": 8,
     "name": "Chapel Hill Public Library",
+    "address": "100 Library Dr, Chapel Hill, NC 27514",
     "lat": 35.93213,
     "long": -79.03572,
     "dinein": false,
@@ -185,6 +193,7 @@
   "9": {
     "id": 9,
     "name": "Summit Franklin",
+    "address": "140 W Franklin St, Chapel Hill, NC 27516",
     "lat": 35.9125,
     "long": -79.05798,
     "dinein": true,
@@ -207,6 +216,7 @@
   "10": {
     "id": 10,
     "name": "The Honeysuckle Cafe and Bar",
+    "address": "601 W Main St, Carrboro, NC 27510",
     "lat": 35.9132,
     "long": -79.0798,
     "dinein": true,
@@ -229,6 +239,7 @@
   "11": {
     "id": 11,
     "name": "Coco Bean Coffee Shop",
+    "address": "1114 Environ Way, Chapel Hill, NC 27517",
     "lat": 35.90702,
     "long": -79.02168,
     "dinein": false,
@@ -251,6 +262,7 @@
   "12": {
     "id": 12,
     "name": "Johnny's Gone Fishing",
+    "address": "901 W Main St, Carrboro, NC 27510",
     "lat": 35.91564,
     "long": -79.0871,
     "dinein": false,
@@ -273,6 +285,7 @@
   "13": {
     "id": 13,
     "name": "Cafe Driade",
+    "address": "1215-A, E Franklin St, Chapel Hill, NC 27514",
     "lat": 35.92536,
     "long": -79.03787,
     "dinein": false,
@@ -295,6 +308,7 @@
   "14": {
     "id": 14,
     "name": "Epilogue Books Chocolate Brews",
+    "address": "109 E Franklin St #100, Chapel Hill, NC 27514",
     "lat": 35.91349,
     "long": -79.055351,
     "dinein": true,
@@ -317,6 +331,7 @@
   "15": {
     "id": 15,
     "name": "Wilson Library",
+    "address": "Wilson Library, Chapel Hill, NC 27514",
     "lat": 35.93105,
     "long": -79.03567,
     "dinein": false,
@@ -339,6 +354,7 @@
   "16": {
     "id": 16,
     "name": "Carolina Union",
+    "address": "209 South Rd, Chapel Hill, NC 27599",
     "lat": 35.909821,
     "long": -79.047234,
     "dinein": true,
@@ -361,6 +377,7 @@
   "17": {
     "id": 17,
     "name": "Cha House",
+    "address": "318 W Franklin St, Chapel Hill, NC 27516",
     "lat": 35.91145,
     "long": -79.06073,
     "dinein": true,
@@ -383,6 +400,7 @@
   "18": {
     "id": 18,
     "name": "Carolina Coffee Shop",
+    "address": "138 E Franklin St, Chapel Hill, NC 27514",
     "lat": 35.91341,
     "long": -79.05436,
     "dinein": true,
