@@ -3,5 +3,9 @@
         "id": 0,
         "username": "username",
         "password": "password"
-      }
+      },
+    "cxsu":{
+        "id": 1,
+        "password":"password"
+    }
 }
