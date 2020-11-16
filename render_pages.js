@@ -84,9 +84,39 @@ const location1 = async  (num) =>{
       $('#noise').append(`<div class="box"><p>${res.data.noise}/5.0</p></div>`);
       $('#price').append(`<div class="box"><p>${res.data.noise}/5.0</p></div>`);
 
+      $('#post').on('click', post);
+
     }catch(err){
         console.error(err);
     }
+}
+
+function post(){
+    console.log("post");
+    let experience = $("#experience").val();
+    let noise = $("#noiseval").val();
+    let prod = $("#prodval").val();
+    let price = $("#priceval").val();
+    let overall = $("#overallval").val();
+
+    $("#thefeed").append(
+        `<div class="box">
+            <p>USERNAME</p>
+            <p><strong>Experience:</strong> ${experience}</p>
+            <p>Noise Rating: ${noise}</p>
+            <p>Productivity Rating: ${prod}</p>
+            <p>Price Rating: ${price}</p>
+            <p>Overall Rating: ${overall}</p>
+        </div>`);
+
+    //UPDATE THE POST ARRAY IN LOCATION.JSON 
+    // const result = await axios({  
+    //     method: 'post',
+    //     url: 'http://localhost:3000/location',
+    //     withCredentials: true,
+    //     data: {},
+    // });
+
 }
 let filePath = location.href;
 let fileURL = new URL(filePath)

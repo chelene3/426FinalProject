@@ -66,15 +66,15 @@
             <div class="box form">
                 <h4 class="title is-4">Add Your Feedback!</h4>
                 <div class="field">
-                    <label class="label">About your experience:</label>
+                    <label for="experience" class="label">About your experience:</label>
                     <div class="control">
-                      <textarea class="textarea" placeholder="Textarea"></textarea>
+                      <textarea id="experience" class="textarea" placeholder="Textarea"></textarea>
                     </div>
                 </div>
                 <div class="control">
-                    <label class="label">Noise Rating:</label>
+                    <label for="noiseval" class="label">Noise Rating:</label>
                     <div class="select">
-                      <select>
+                      <select id="noiseval">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -85,9 +85,9 @@
                     </div>
                   </div>
                   <div class="control">
-                    <label class="label">Productivity Rating:</label>
+                    <label for="prodval" class="label">Productivity Rating:</label>
                     <div class="select">
-                      <select>
+                      <select id="prodval">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -98,9 +98,9 @@
                     </div>
                   </div>
                   <div class="control">
-                    <label class="label">Price Rating:</label>
+                    <label for="priceval" class="label">Price Rating:</label>
                     <div class="select">
-                      <select>
+                      <select id="priceval">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -111,9 +111,9 @@
                     </div>
                   </div>
                   <div class="control">
-                    <label class="label">Overall Rating:</label>
+                    <label for="overallval" class="label">Overall Rating:</label>
                     <div class="select">
-                      <select>
+                      <select id="overallval">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -124,11 +124,11 @@
                     </div>
                   </div>
                 <div class="buttons is-right">
-                <button class="button is-info">Post</button>
+                <button id="post" type="submit" class="button is-info">Post</button>
                 </div>
             </div>
+            <h1 class="title is-3" id="thefeed">Feed</h1>
         </div>
     </div>
 </body>
-
 </html>
