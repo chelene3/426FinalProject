@@ -149,6 +149,19 @@ const Secret= require("./secret.js");
 
 const login_data = require('data-store')({ path: process.cwd() + '/data/users.json' });
 
+app.post('/createUser', (req, res) =>{
+  let user = req.body.username;
+  let data = req.body
+  if(login_data.get(user) == null){
+    login_data.set(user, data);
+    res.json(true);
+    return;
+  }
+  else{
+    res.status(400).send("username already exists");
+  }
+})
+
 app.post('/login', (req,res) => {
     let user = req.body.username;
     let password = req.body.password;
@@ -195,7 +208,8 @@ app.get('/secret/:id', (req, res) => {
         return;
     }
 
-    if (s.owner != req.session.user) {
+    if (s.username != req.session.user) {
+    
         res.status(403).send("Unauthorized");
         return;
     }
@@ -228,7 +242,7 @@ app.put('/secret/:id', (req, res) => {
         res.status(404).send("Not found");
         return;
     }
-    if (s.owner != req.session.user) {
+    if (s.username != req.session.user) {
         res.status(403).send("Unauthorized");
         return;
     }
@@ -249,7 +263,7 @@ app.delete('/secret/:id', (req, res) => {
         return;
     }
 
-    if (s.owner != req.session.user) {
+    if (s.username != req.session.user) {
         res.status(403).send("Unauthorized");
         return;
     }
