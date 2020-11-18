@@ -19,5 +19,9 @@
   "cookie": {
     "username": "cookie",
     "password": "monster"
+  },
+  "chelsea": {
+    "username": "chelsea",
+    "password": "pass1"
   }
 }
