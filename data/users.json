@@ -15,5 +15,9 @@
   "crowe": {
     "username": "crowe",
     "password": "password"
+  },
+  "cookie": {
+    "username": "cookie",
+    "password": "monster"
   }
 }
