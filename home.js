@@ -1,3 +1,5 @@
+// const { default: Axios } = require("axios");
+
 $(function(){
   registerSearchButton();
 });
@@ -41,6 +43,17 @@ $ (function () {
   });
 });
 
+// async function showUser(){
+//   const result = await axios({
+//     method: 'get',
+//     url: 'http://localhost:3001/secret',
+//     withCredentials:true
+//   })
+//   console.log(result.data);
+//   $('#secret').append(result.data);
+// }
+
+showUser();
 //TRY TO GET THIS FROM BACKEND NOT HARDCODED
 let dictVals = {
     "Starbucks": 1,

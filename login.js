@@ -8,18 +8,31 @@ app.use(bodyParser.json());
 
 const expressSession = require('express-session');
 
+let cors = require('cors');
+
+const corsConfi = {
+  origin: "http://localhost:3002",
+  credentials: true
+}
+app.use(cors(corsConfi));
+
 app.use(expressSession({
     name: "kmpSessionCookie",
     secret: "express session secret",
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: {
+    //   secure: true, 
+      maxAge: 5184000000
+    }
     
-}), function(req, res, next){
-  // res.header('Access-Control-Allow-Credentials', true);
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+ }));
+// app.use(function(req, res, next){
+//     res.header('Access-Control-Allow-Credentials', true);
+//       res.header("Access-Control-Allow-Origin", "http://localhost:3002");
+//       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//       next();
+//   });
 
 const Secret= require("./secret.js");
 
@@ -51,6 +64,7 @@ app.post('/login', (req,res) => {
     if (user_data.password == password) {
         console.log("User " + user + " credentials valid");
         req.session.user = user;
+        console.log(req.session.user);
         res.json(true);
         return;
     }
