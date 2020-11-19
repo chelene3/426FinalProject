@@ -11,7 +11,7 @@ const expressSession = require('express-session');
 let cors = require('cors');
 
 const corsConfi = {
-  origin: "http://localhost:3002",
+  origin: "http://localhost:3000",
   credentials: true
 }
 app.use(cors(corsConfi));
@@ -162,7 +162,7 @@ app.delete('/secret/:id', (req, res) => {
     res.json(true);
 })
 
-const port = 3001;
+const port = 3003;
 app.listen(port, () => {
     console.log("User Login Example up and running on port " + port);
 });
