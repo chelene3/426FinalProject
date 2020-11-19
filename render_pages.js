@@ -23,6 +23,48 @@ const location1 = async  (num) =>{
         console.error(err);
     }
 }
+$('#thefeed').append(getPosts());
+
+async function getPosts(){
+    let result = await axios({
+        method: 'get',
+        url: `http://localhost:3005/location/`,
+        data: {
+            date: date,
+            locationID: locationID,
+            review: review,
+        },
+        withCredentials: true,
+    });
+    return result;
+}
+
+async function createPost(){
+    let review = $('#experience').val();
+    let date = new Date();
+    let locationID = name;
+    // updating locations database
+    let result1 = await axios({
+        method: 'post',
+        url: `http://localhost:3005/location/${id}`,
+        data: {
+            date: date,
+            locationID: locationID,
+            review: review,
+        },
+        withCredentials: true,
+    });
+    // updating user secrets
+    let result2 = await axios({
+        method: 'post',
+        url: `http://localhost:3005/login/${id}`,
+        data: {
+            secret: review,
+        },
+        withCredentials: true
+    });
+}
+
 let filePath = location.href;
 let fileURL = new URL(filePath)
 let name = fileURL.searchParams.get("name");
