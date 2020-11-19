@@ -34,7 +34,7 @@ app.use(expressSession({
 //       next();
 //   });
 
-const Secret= require("./backend/secret.js");
+const Secret= require("./secret.js");
 
 const login_data = require('data-store')({ path: process.cwd() + '/data/users.json' });
 
