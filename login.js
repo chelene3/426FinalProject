@@ -11,7 +11,8 @@ const expressSession = require('express-session');
 let cors = require('cors');
 
 const corsConfi = {
-  origin: "http://localhost:3000",
+  //origin: "http://localhost:3000",
+  origin: "https://mystifying-pasteur-b729db.netlify.app",
   credentials: true
 }
 app.use(cors(corsConfi));
