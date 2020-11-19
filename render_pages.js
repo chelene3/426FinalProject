@@ -1,5 +1,6 @@
 
 const location1 = async  (num) =>{
+    console.log("location1");
     try{
         const res = await axios({
             method: 'get',
@@ -17,36 +18,41 @@ const location1 = async  (num) =>{
       </iframe>`)
       $('#desc').append(`<p>${res.data.des}</p>`);
       $('#covid').append(`<p>${res.data.covid}</p>`);
-
+      $('#post').on('click', createPost(num));
 
     }catch(err){
         console.error(err);
     }
 }
-$('#thefeed').append(getPosts());
 
-async function getPosts(){
-    let result = await axios({
+$('#thefeed').append(getPosts(1));
+
+async function getPosts(id){
+    console.log("geting posts");
+    let location = await axios({
         method: 'get',
-        url: `http://localhost:3005/location/`,
-        data: {
-            date: date,
-            locationID: locationID,
-            review: review,
-        },
-        withCredentials: true,
+        url: `http://localhost:3000/location/${id}`,
     });
-    return result;
+    let post = location.data.posts;
+    console.log(post);
+    return post;
 }
 
-async function createPost(){
-    let review = $('#experience').val();
+async function createPost(id){
+    console.log("creating your post");
+
+    let review = $("#experience").val();
+    let noise = $("#noiseval").val();
+    let prod = $("#prodval").val();
+    let price = $("#priceval").val();
+    let overall = $("#overallval").val();
     let date = new Date();
     let locationID = name;
+
     // updating locations database
     let result1 = await axios({
         method: 'post',
-        url: `http://localhost:3005/location/${id}`,
+        url: `http://localhost:3000/location/${id}`,
         data: {
             date: date,
             locationID: locationID,
@@ -54,6 +60,7 @@ async function createPost(){
         },
         withCredentials: true,
     });
+
     // updating user secrets
     let result2 = await axios({
         method: 'post',
@@ -63,12 +70,29 @@ async function createPost(){
         },
         withCredentials: true
     });
+    
+    let thePost = `<div class="box">
+        <p>USERNAME</p>
+        <p>${date}</p>
+        <p>${name}</p>
+        <p><strong>Experience:</strong> ${experience}</p>
+        <p>Noise Rating: ${noise}</p>
+        <p>Productivity Rating: ${prod}</p>
+        <p>Price Rating: ${price}</p>
+        <p>Overall Rating: ${overall}</p>
+    </div>`;
+    console.log(thePost);
+    $('#thefeed').append(getPosts(id));
+    return thePost;
 }
 
 let filePath = location.href;
 let fileURL = new URL(filePath)
 let name = fileURL.searchParams.get("name");
 location1(name);
+
+
+
 /*
  url for post: 'http://localhost:3000/location'
  url for put (update) : 'http://localhost:3000/location/{id}'
