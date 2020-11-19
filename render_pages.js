@@ -3,7 +3,7 @@ const location1 = async  (num) =>{
     try{
         const res = await axios({
             method: 'get',
-            url: `http://localhost:3000/location/${num}`,
+            url: `http://rocky-chamber-40639.herokuapp.com/location/${num}`,
         })
         console.log(res.data);
 

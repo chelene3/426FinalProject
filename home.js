@@ -53,7 +53,7 @@ $ (function () {
 //   $('#secret').append(result.data);
 // }
 
-showUser();
+//showUser();
 //TRY TO GET THIS FROM BACKEND NOT HARDCODED
 let dictVals = {
     "Starbucks": 1,

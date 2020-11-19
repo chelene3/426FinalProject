@@ -8,7 +8,7 @@ $(function () {
 async function allCardsID(){
   const result = await axios({
     method: 'get',
-    url: 'http://localhost:3000/location/',
+    url: 'https://rocky-chamber-40639.herokuapp.com/location/',
   });
   getCards(result.data);
 }
@@ -21,7 +21,7 @@ async function getCards(cardIDs) {
 async function getData(id){
   const result = await axios({
     method: 'get',
-    url: `http://localhost:3000/location/${id}`,
+    url: `http://rocky-chamber-40639.herokuapp.com/location/${id}`,
   });
   makeCard(result.data);
 
