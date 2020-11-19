@@ -5,7 +5,8 @@ $(function () {
         let passwordTyped = $("#password-old-input").val();
         const result = await axios( {
             method: 'post',
-            url: 'https://enigmatic-meadow-24377.herokuapp.com/login',
+            //url: 'https://enigmatic-meadow-24377.herokuapp.com/login', //HEROKU
+            url: 'http://localhost:3003/login', //LOCAL
             data: {
                 username: `${userTyped}`,
                 password: `${passwordTyped}`
@@ -36,7 +37,8 @@ $(document).on('click', '#createaccount-submit', async function(event) {
     } else {
         const result = await axios( {
             method: 'post',
-            url: 'https://enigmatic-meadow-24377.herokuapp.com/createUser',
+            //url: 'https://enigmatic-meadow-24377.herokuapp.com/createUser', //HEROKU
+            url: 'http://localhost:3003/createUser', //LOCAL
             data: {
                 username: `${userTyped}`,
                 password: `${password1}`

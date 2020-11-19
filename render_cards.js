@@ -8,7 +8,8 @@ $(function () {
 async function allCardsID(){
   const result = await axios({
     method: 'get',
-    url: 'https://rocky-chamber-40639.herokuapp.com/location/',
+    //url: 'https://rocky-chamber-40639.herokuapp.com/location/', //HEROKU
+    url: 'http://localhost:3000/location' //LOCAL
   });
   getCards(result.data);
 }
@@ -21,7 +22,8 @@ async function getCards(cardIDs) {
 async function getData(id){
   const result = await axios({
     method: 'get',
-    url: `http://rocky-chamber-40639.herokuapp.com/location/${id}`,
+    //url: `http://rocky-chamber-40639.herokuapp.com/location/${id}`, //HEROKU
+    url: `http://localhost:3000/location/${id}` //LOCAL
   });
   makeCard(result.data);
 
