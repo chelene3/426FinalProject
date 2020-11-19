@@ -21,7 +21,7 @@ async function getCards(cardIDs) {
 async function getData(id){
   const result = await axios({
     method: 'get',
-    url: `http://rocky-chamber-40639.herokuapp.com/location/${id}`,
+    url: `https://rocky-chamber-40639.herokuapp.com/location/${id}`,
   });
   makeCard(result.data);
 
