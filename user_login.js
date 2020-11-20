@@ -15,7 +15,6 @@ $(function () {
         }).catch(() => {
             $("#login-back").append('<br><p class="has-text-danger">Username or password incorrect. Try again!<p>')
         });
-        //console.log(result.data);
         if(result.data == true){
             
             location.href = "./profile_mockpage.html"
@@ -47,6 +46,7 @@ $(document).on('click', '#createaccount-submit', async function(event) {
             withCredentials: true
         });
         console.log(results.data);
+        alert("hmm");
        
     }
 })
