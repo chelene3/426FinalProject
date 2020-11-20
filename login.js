@@ -67,7 +67,6 @@ app.post('/login', (req,res) => {
     if (user_data.password == password) {
         console.log("User " + user + " credentials valid");
         req.session.user = user;
-        console.log(req.session.user);
         res.json(true);
         return;
     }
@@ -77,7 +76,19 @@ app.post('/login', (req,res) => {
 app.get('/logout', (req, res) => {
     delete req.session.user;
     res.json(true);
-})
+});
+
+app.get('/user', (req, res) => {
+    if(req.session.user == undefined){
+        res.status(404).send("no user logged in");
+        console.log("no user");
+        return;
+    }
+    let user = req.session.user;
+    let user_data = login_data.get(user);
+    res.json(user_data);
+    return;
+});
 
 app.get('/secret', (req, res) => {
     if (req.session.user == undefined) {

@@ -17,6 +17,7 @@ $(function () {
         });
         //console.log(result.data);
         if(result.data == true){
+            
             location.href = "./profile_mockpage.html"
             //$("#name").append('<p>LOGGED IN USER</p>')
             //   getUserInfo();
@@ -54,7 +55,7 @@ $(document).on('click', '#createaccount-submit', async function(event) {
 // async function getUserInfo(){
 //     const result = await axios( {
 //         method: 'get',
-//         url: 'http://localhost:3001/secret',
+//         url: 'http://localhost:3003/user',
 //         withCredentials: true
 
 //     });
