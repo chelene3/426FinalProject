@@ -6,13 +6,26 @@ $(function () {
 async function getUserInfo(){
     const result = await axios( {
         method: 'get',
-        url: 'http://localhost:3001/secret',
-        withCredentials: false
+        url: 'https://enigmatic-meadow-24377.herokuapp.com/user',
+        withCredentials: true
 
     });
     console.log(result.data);
+    $('#username').append(result.data.username);
 
 }
  
+async function getSecrets(){
+    const result = await axios( {
+        method: 'get',
+        url: 'http://localhost:3003/secret',
+        withCredentials: true
+
+    });
+    console.log(result.data);
+    $('#username').append(result.data.username);
+
+}
+getSecrets();
 
 getUserInfo();
