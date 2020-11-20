@@ -18,7 +18,7 @@ async function getUserInfo(){
 async function getSecrets(){
     const result = await axios( {
         method: 'get',
-        url: 'http://localhost:3003/secret',
+        url: 'https://enigmatic-meadow-24377.herokuapp.com/secret',
         withCredentials: true
 
     });
