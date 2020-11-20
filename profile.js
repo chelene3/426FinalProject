@@ -1,3 +1,5 @@
+const expressSession = require('express-session');
+
 $(function () {
  
 });   
@@ -6,7 +8,7 @@ $(function () {
 async function getUserInfo(){
     const result = await axios( {
         method: 'get',
-        url: 'http://localhost:3001/secret',
+        url: 'http://localhost:3000/secret',
         withCredentials: false
 
     });
@@ -14,5 +16,5 @@ async function getUserInfo(){
 
 }
  
-
+alert(session.user);
 getUserInfo();
