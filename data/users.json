@@ -35,5 +35,13 @@
   "pumpkin": {
     "username": "pumpkin",
     "password": "ayo"
+  },
+  "candy": {
+    "username": "candy",
+    "password": "corn"
+  },
+  "tryagain": {
+    "username": "tryagain",
+    "password": "oops"
   }
 }

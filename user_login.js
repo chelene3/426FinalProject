@@ -35,7 +35,7 @@ $(document).on('click', '#createaccount-submit', async function(event) {
         alert("Passwords do not match, try again!");
         return;
     } else {
-        const result = await axios( {
+        const result = await axios({
             method: 'post',
             //url: 'https://enigmatic-meadow-24377.herokuapp.com/createUser', //HEROKU
             url: 'http://localhost:3003/createUser', //LOCAL
@@ -46,10 +46,9 @@ $(document).on('click', '#createaccount-submit', async function(event) {
             withCredentials: true
         });
         console.log(results.data);
-        alert("hmm");
-       
     }
 })
+
 })
 
 // async function getUserInfo(){
