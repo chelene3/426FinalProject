@@ -48,18 +48,28 @@ async function getPosts(id){
 async function createPost(){
     console.log("creating post");
     let id=name;
+
+    //getting user
+    let user = await axios({
+        method: 'get',
+        url: `http://localhost:3003/user`,
+        withCredentials: true
+    });
+    let username = user.data.username;
+    let userID = user.data.id;
+    console.log(username);
+
     let review = $("#experience").val();
     let noise = $("#noiseval").val();
     let prod = $("#prodval").val();
     let price = $("#priceval").val();
     let overall = $("#overallval").val();
     let date = new Date();
-    let locationID = name;
 
+    // making the post 
     let thePost = `<div class="box">
-        <p>USERNAME</p>
+        <p>${username}</p>
         <p>${date}</p>
-        <p>${name}</p>
         <p><strong>Experience:</strong> ${review}</p>
         <p>Noise Rating: ${noise}</p>
         <p>Productivity Rating: ${prod}</p>
@@ -67,6 +77,7 @@ async function createPost(){
         <p>Overall Rating: ${overall}</p>
     </div>`;
     console.log(thePost);
+
     //getting location
     console.log("getting posts");
     let location = await axios({
@@ -93,9 +104,9 @@ async function createPost(){
     // try{
     //     const result2 = await axios({
     //         method: 'put',
-    //         url: `http://localhost:3005/login/${id}`,
+    //         url: `http://localhost:3003/scret/${userID}`,
     //         data: {
-    //             secret: review,
+    //             secret: thePost,
     //         },
     //         withCredentials: true
     //     });
