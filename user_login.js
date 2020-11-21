@@ -13,7 +13,7 @@ $(function () {
             },
             withCredentials: true
         }).catch(() => {
-            $("#login-back").append('<br><p class="has-text-danger">Username or password incorrect. Try again!<p>')
+            $("#error").replaceWith('<br><p class="has-text-danger">Username or password incorrect. Try again!<p>')
         });
         if(result.data == true){
             

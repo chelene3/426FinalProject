@@ -14,7 +14,8 @@ async function getUserInfo(){
     // appending the username onto profile page
     let nameTemp = `<h2><b>${result.data.username}</b></h2>`;
     $('#username').append(nameTemp);
-    
+    $("#name").append(`<button class="button is-light" id="logout">Logout</button><br><br>`)
+    registerLogoutButton();
 }
 
 // gets the secrets from the current user logged in
@@ -53,4 +54,17 @@ async function getInfoIds(id) {
 
 }
 
+const registerLogoutButton = function () {
+    document.querySelectorAll("#logout").forEach(item => {
+        item.addEventListener("click", handleLogoutButtonPress);
+    })
+  }
 
+const handleLogoutButtonPress = function (event) {
+    const result = axios( {
+        method: 'get',
+        url: `http://localhost:3003/logout`,
+        withCredentials: true
+    })
+    window.location.href="index.html"
+};
