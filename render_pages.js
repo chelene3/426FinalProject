@@ -19,7 +19,9 @@ const location1 = async  (num) =>{
       $('#desc').append(`<p>${res.data.des}</p>`);
       $('#covid').append(`<p>${res.data.covid}</p>`);
       $('#post').on('click', createPost);
-      $('#thefeed').append(getPosts(1));
+
+      console.log("about to get posts");
+      getPosts(1);
     }catch(err){
         console.error(err);
     }
@@ -32,8 +34,14 @@ async function getPosts(id){
         url: `http://localhost:3000/location/${id}`,
     });
     let post = location.data.posts;
-    console.log(post);
-    return post;
+    let oldPosts = "";
+    for(let i=0; i<post.length; i++){
+        oldPosts += `<div class="box">
+            <p>${post[i]}</p>
+        </div>`;
+    }
+    console.log(oldPosts);
+    $("#thefeed").append(oldPosts);
 }
 
 async function createPost(){
@@ -51,24 +59,29 @@ async function createPost(){
         <p>USERNAME</p>
         <p>${date}</p>
         <p>${name}</p>
-        <p><strong>Experience:</strong> ${experience}</p>
+        <p><strong>Experience:</strong> ${review}</p>
         <p>Noise Rating: ${noise}</p>
         <p>Productivity Rating: ${prod}</p>
         <p>Price Rating: ${price}</p>
         <p>Overall Rating: ${overall}</p>
     </div>`;
     console.log(thePost);
+    //getting location
+    console.log("getting posts");
+    let location = await axios({
+        method: 'get',
+        url: `http://localhost:3000/location/${id}`,
+    });
+    location.data.posts.push(thePost);
+    let newData = location.data;
+    console.log(newData);
 
     // updating locations database
     try{
         const result1 = await axios({
             method: 'put',
             url: `http://localhost:3000/location/${id}`,
-            data: {
-                date: date,
-                locationID: locationID,
-                review: review,
-            },
+            data: newData,
             withCredentials: true,
         });
     }catch(err){
@@ -76,18 +89,18 @@ async function createPost(){
     }
 
     // updating user secrets
-    try{
-        const result2 = await axios({
-            method: 'put',
-            url: `http://localhost:3005/login/${id}`,
-            data: {
-                secret: review,
-            },
-            withCredentials: true
-        });
-    }catch(err){
-        console.error(err);
-    }
+    // try{
+    //     const result2 = await axios({
+    //         method: 'put',
+    //         url: `http://localhost:3005/login/${id}`,
+    //         data: {
+    //             secret: review,
+    //         },
+    //         withCredentials: true
+    //     });
+    // }catch(err){
+    //     console.error(err);
+    // }
     console.log("here");
     $('#thefeed').append(thePost);
     return thePost;
