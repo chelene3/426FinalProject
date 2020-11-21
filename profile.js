@@ -14,7 +14,10 @@ async function getUserInfo(){
     // appending the username onto profile page
     let nameTemp = `<h2><b>${result.data.username}</b></h2>`;
     $('#username').append(nameTemp);
-    $("#name").append(`<button class="button is-light" id="logout">Logout</button><br><br>`)
+    if (result.data.img != undefined) {
+        $('#profpic').replaceWith(`<img src=${result.data.img} alt="Profile Avatar" width="200" heigh="200">`)
+    }
+        $("#name").append(`<button class="button is-light" id="logout">Logout</button><br><br>`)
     registerLogoutButton();
 }
 
