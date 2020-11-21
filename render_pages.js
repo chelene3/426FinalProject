@@ -22,7 +22,7 @@ const location1 = async  (num) =>{
       $('#post').on('click', createPost);
 
       console.log("about to get posts");
-      getPosts(1);
+      getPosts(num);
     }catch(err){
         console.error(err);
     }
@@ -30,6 +30,7 @@ const location1 = async  (num) =>{
 
 async function getPosts(id){
     console.log("getting posts");
+    console.log(id);
     let location = await axios({
         method: 'get',
         url: `http://localhost:3000/location/${id}`,
