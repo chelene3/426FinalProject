@@ -22,7 +22,7 @@ const location1 = async  (num) =>{
       $('#post').on('click', createPost);
 
       console.log("about to get posts");
-      getPosts(1);
+      getPosts(num);
     }catch(err){
         console.error(err);
     }
