@@ -250,8 +250,12 @@
     "profilePic": "https://i.pinimg.com/originals/0f/f0/b9/0ff0b92010459cc989ca6471cc4494df.jpg",
     "coverPic": "https://images.squarespace-cdn.com/content/v1/5dc59a187be3e11f79f2fc89/1602598488536-ZOUVSVP9BTEPXNI2CL18/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_9661.jpg?format=1000w",
     "posts": [
+      "<div class=\"box\">\n        <p>@cookie</p>\n        <p>11/21/2020 -- 5:49:56 PM</p>\n        <h1>Experience: time function</h1>\n        <h1>Noise Rating: 0</h1>\n        <h1>Productivity Rating: 0</h1>\n        <h1>Price Rating: 0</h1>\n        <h1>Overall Rating: 0</h1>\n    </div>",
+      "<div class=\"box\">\n        <p>@cookie</p>\n        <p>11/21/2020 -- function toLocaleTimeString() { [native code] }</p>\n        <h1>Experience: time</h1>\n        <h1>Noise Rating: 0</h1>\n        <h1>Productivity Rating: 0</h1>\n        <h1>Price Rating: 0</h1>\n        <h1>Overall Rating: 0</h1>\n    </div>",
+      "<div class=\"box\">\n        <p>@cookie</p>\n        <p>11/21/2020 -- 1606002519995</p>\n        <h1>Experience: try time</h1>\n        <h1>Noise Rating: 0</h1>\n        <h1>Productivity Rating: 0</h1>\n        <h1>Price Rating: 0</h1>\n        <h1>Overall Rating: 0</h1>\n    </div>",
+      "<div class=\"box\">\n        <p>@cookie</p>\n        <p>11/21/2020</p>\n        <h1>Experience: post at front</h1>\n        <h1>Noise Rating: 0</h1>\n        <h1>Productivity Rating: 0</h1>\n        <h1>Price Rating: 0</h1>\n        <h1>Overall Rating: 0</h1>\n    </div>",
       "first post",
-      "<div class=\"box\">\n        <p>USERNAME</p>\n        <p>Sat Nov 21 2020 17:06:36 GMT-0600 (Central Standard Time)</p>\n        <p>9</p>\n        <p><strong>Experience:</strong> test</p>\n        <p>Noise Rating: 0</p>\n        <p>Productivity Rating: 0</p>\n        <p>Price Rating: 0</p>\n        <p>Overall Rating: 0</p>\n    </div>"
+      "<div class=\"box\">\n        <p>@cookie</p>\n        <p class=\"text-is-success\">11/21/2020</p>\n        <h1>Experience: green?</h1>\n        <h1>Noise Rating: 0</h1>\n        <h1>Productivity Rating: 0</h1>\n        <h1>Price Rating: 0</h1>\n        <h1>Overall Rating: 0</h1>\n    </div>"
     ]
   },
   "10": {

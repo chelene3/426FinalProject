@@ -11,7 +11,7 @@ const expressSession = require('express-session');
 let cors = require('cors');
 
 const corsConfi = {
-  origin: "http://localhost:3000", //LOCAL
+  origin: "http://localhost:3001", //LOCAL
   //origin: "http://localhost:3000", //HEROKU
   credentials: true
 }
