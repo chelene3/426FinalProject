@@ -1,3 +1,4 @@
+let username = "";
 
 const location1 = async  (num) =>{
     console.log("location1");
@@ -56,16 +57,21 @@ async function createPost(){
     let overall = $("#overallval").val();
     let date = new Date();
     let locationID = name;
+    const result = await axios( {
+        method: 'get',
+        url: 'http://localhost:3003/user',
+        withCredentials: true
 
+    });
+    
     let thePost = `<div class="box">
-        <p>USERNAME</p>
-        <p>${date}</p>
-        <p>${name}</p>
-        <p><strong>Experience:</strong> ${review}</p>
-        <p>Noise Rating: ${noise}</p>
-        <p>Productivity Rating: ${prod}</p>
-        <p>Price Rating: ${price}</p>
-        <p>Overall Rating: ${overall}</p>
+        <p>@${result.data.username}</p>
+        <p>${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()} -- ${date.toLocaleTimeString()}</p>
+        <h1>Experience: ${review}</h1>
+        <h1>Noise Rating: ${noise}</h1>
+        <h1>Productivity Rating: ${prod}</h1>
+        <h1>Price Rating: ${price}</h1>
+        <h1>Overall Rating: ${overall}</h1>
     </div>`;
     console.log(thePost);
     //getting location
@@ -74,7 +80,7 @@ async function createPost(){
         method: 'get',
         url: `http://localhost:3000/location/${id}`,
     });
-    location.data.posts.push(thePost);
+    location.data.posts.unshift(thePost);
     let newData = location.data;
     console.log(newData);
 
