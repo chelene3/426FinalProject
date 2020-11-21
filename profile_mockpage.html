@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./profile.js"></script>
     <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         <div>
             <a href="index.html"><img id="small_logo" src="https://lh3.googleusercontent.com/XvE-Xpqbz2VeJjpnCQgsn_cA3v1ZXJKual7Z0XlWef4YOTK0C4DkgeWlMozuPs7ZUxCW1Clit7PhtM6fCo1LIe3c-u-Jt4p-POL0535mzdb_dOwr5-GoISDlRlmZIjGf7miHBv9nhv8=w2400"/></a>
         </div>
-        <div class="content has-text-centered"> 
+        <div class="content has-text-centered" id="name"> 
             <h1 class="has-text-info-dark">Profile Page</h1>
         </div>
     </section>
@@ -24,30 +25,25 @@
     <section class="section has-background-info-light">
         <div class="has-text-centered">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="Profile Avatar" width="200" heigh="200">
-            <h2 id="firstName">FirstName LastName</h2>
-            <h3>Username</h3>
+            <h3 id="usernameHeader">Username:</h3>
+            <p id="username"></p>
             <p>Likes: 0</p>
         </div>
+        
     </section>
     
 
     <div class="columns is-multiline is-mobile">
         <div class="column is-half">
             <h2 class="has-text-centered has-text-info-dark">Previous Posts</h2>
-            <div class="box">
-                <p>Previous Post 1</p>
-            </div>
-            <div class="box">
-                <p>Previous Post 2</p>
+            <div id="prevPostsDiv" class="box">
+                <p id="prevPostParagraph"></p>
             </div>
         </div>
         <div class="column is-half">
             <h2 class="has-text-centered has-text-info-dark">Liked Posts</h2>
-            <div class="box">
-                <p>Liked Post 1</p>
-            </div>
-            <div class="box">
-                <p>Liked Post 2</p>
+            <div id="likedPostsDiv" class="box">
+                <p id="likedPosts"></p>
             </div>
         </div>
     </div>

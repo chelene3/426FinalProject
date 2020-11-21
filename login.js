@@ -11,7 +11,8 @@ const expressSession = require('express-session');
 let cors = require('cors');
 
 const corsConfi = {
-  origin: "http://localhost:3001",
+  origin: "http://localhost:3000", //LOCAL
+  //origin: "http://localhost:3000", //HEROKU
   credentials: true
 }
 app.use(cors(corsConfi));
@@ -37,6 +38,8 @@ app.use(expressSession({
 const Secret= require("./secret.js");
 
 const login_data = require('data-store')({ path: process.cwd() + '/data/users.json' });
+
+let userId;
 
 app.post('/createUser', (req, res) =>{
   let user = req.body.username;
@@ -64,7 +67,6 @@ app.post('/login', (req,res) => {
     if (user_data.password == password) {
         console.log("User " + user + " credentials valid");
         req.session.user = user;
-        console.log(req.session.user);
         res.json(true);
         return;
     }
@@ -74,7 +76,19 @@ app.post('/login', (req,res) => {
 app.get('/logout', (req, res) => {
     delete req.session.user;
     res.json(true);
-})
+});
+
+app.get('/user', (req, res) => {
+    if(req.session.user == undefined){
+        res.status(404).send("no user logged in");
+        console.log("no user");
+        return;
+    }
+    let user = req.session.user;
+    let user_data = login_data.get(user);
+    res.json(user_data);
+    return;
+});
 
 app.get('/secret', (req, res) => {
     if (req.session.user == undefined) {
@@ -103,7 +117,6 @@ app.get('/secret/:id', (req, res) => {
         res.status(403).send("Unauthorized");
         return;
     }
-
     res.json(s);
 } );
 
@@ -112,8 +125,14 @@ app.post('/secret', (req, res)=> {
         res.status(403).send("Unauthorized");
         return;
     }
+    // now the Secret create has another parameter called type
+    // type is either "previous" or "liked" string
+    // the create function creates an instance of Secret with boolean values for those types
 
-    let s = Secret.create(req.session.user, req.body.secret); //add other parameters here?
+    // we need to check somehow to see if the user wants to have a previous post or liked post
+    let type = "previous";
+    // let type = "liked";
+    let s = Secret.create(req.session.user, req.body.secret, type); 
     if (s == null) {
         res.status(400).send("Bad Request");
         return;

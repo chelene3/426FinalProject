@@ -5,7 +5,8 @@ $(function () {
         let passwordTyped = $("#password-old-input").val();
         const result = await axios( {
             method: 'post',
-            url: 'http://localhost:3003/login',
+            //url: 'https://enigmatic-meadow-24377.herokuapp.com/login', //HEROKU
+            url: 'http://localhost:3003/login', //LOCAL
             data: {
                 username: `${userTyped}`,
                 password: `${passwordTyped}`
@@ -14,9 +15,10 @@ $(function () {
         }).catch(() => {
             $("#login-back").append('<br><p class="has-text-danger">Username or password incorrect. Try again!<p>')
         });
-        console.log(result.data);
         if(result.data == true){
-            location.href = "./index.html"
+            
+            location.href = "./profile_mockpage.html"
+            //$("#name").append('<p>LOGGED IN USER</p>')
             //   getUserInfo();
         } 
         // let cookie = result.data;
@@ -33,9 +35,10 @@ $(document).on('click', '#createaccount-submit', async function(event) {
         alert("Passwords do not match, try again!");
         return;
     } else {
-        const result = await axios( {
+        const result = await axios({
             method: 'post',
-            url: 'http://localhost:3003/createUser',
+            //url: 'https://enigmatic-meadow-24377.herokuapp.com/createUser', //HEROKU
+            url: 'http://localhost:3003/createUser', //LOCAL
             data: {
                 username: `${userTyped}`,
                 password: `${password1}`
@@ -43,15 +46,15 @@ $(document).on('click', '#createaccount-submit', async function(event) {
             withCredentials: true
         });
         console.log(results.data);
-       
     }
 })
+
 })
 
 // async function getUserInfo(){
 //     const result = await axios( {
 //         method: 'get',
-//         url: 'http://localhost:3001/secret',
+//         url: 'http://localhost:3003/user',
 //         withCredentials: true
 
 //     });
