@@ -18,17 +18,15 @@ const location1 = async  (num) =>{
       </iframe>`)
       $('#desc').append(`<p>${res.data.des}</p>`);
       $('#covid').append(`<p>${res.data.covid}</p>`);
-      $('#post').on('click', createPost(num));
-
+      $('#post').on('click', createPost);
+      $('#thefeed').append(getPosts(1));
     }catch(err){
         console.error(err);
     }
 }
 
-$('#thefeed').append(getPosts(1));
-
 async function getPosts(id){
-    console.log("geting posts");
+    console.log("getting posts");
     let location = await axios({
         method: 'get',
         url: `http://localhost:3000/location/${id}`,
@@ -38,9 +36,9 @@ async function getPosts(id){
     return post;
 }
 
-async function createPost(id){
-    console.log("creating your post");
-
+async function createPost(){
+    console.log("creating post");
+    let id=name;
     let review = $("#experience").val();
     let noise = $("#noiseval").val();
     let prod = $("#prodval").val();
@@ -49,28 +47,6 @@ async function createPost(id){
     let date = new Date();
     let locationID = name;
 
-    // updating locations database
-    let result1 = await axios({
-        method: 'post',
-        url: `http://localhost:3000/location/${id}`,
-        data: {
-            date: date,
-            locationID: locationID,
-            review: review,
-        },
-        withCredentials: true,
-    });
-
-    // updating user secrets
-    let result2 = await axios({
-        method: 'post',
-        url: `http://localhost:3005/login/${id}`,
-        data: {
-            secret: review,
-        },
-        withCredentials: true
-    });
-    
     let thePost = `<div class="box">
         <p>USERNAME</p>
         <p>${date}</p>
@@ -82,7 +58,38 @@ async function createPost(id){
         <p>Overall Rating: ${overall}</p>
     </div>`;
     console.log(thePost);
-    $('#thefeed').append(getPosts(id));
+
+    // updating locations database
+    try{
+        const result1 = await axios({
+            method: 'put',
+            url: `http://localhost:3000/location/${id}`,
+            data: {
+                date: date,
+                locationID: locationID,
+                review: review,
+            },
+            withCredentials: true,
+        });
+    }catch(err){
+        console.error(err);
+    }
+
+    // updating user secrets
+    try{
+        const result2 = await axios({
+            method: 'put',
+            url: `http://localhost:3005/login/${id}`,
+            data: {
+                secret: review,
+            },
+            withCredentials: true
+        });
+    }catch(err){
+        console.error(err);
+    }
+    console.log("here");
+    $('#thefeed').append(thePost);
     return thePost;
 }
 
@@ -90,6 +97,7 @@ let filePath = location.href;
 let fileURL = new URL(filePath)
 let name = fileURL.searchParams.get("name");
 location1(name);
+//$('#thefeed').append(getPosts(1));
 
 
 

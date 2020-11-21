@@ -8,12 +8,18 @@ const Location = require('./location.js');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
-app.use(function(req,res,next){
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-})
+// app.use(function(req,res,next){
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// })
+let cors = require('cors');
 
+const corsConfi = {
+  origin: "http://localhost:3001",
+  credentials: true
+}
+app.use(cors(corsConfi));
 app.get('/location', (req, res)=>{
     // res.header("Access-Control-Allow-Origin", "*");
     res.json(Location.getALLIDs());
