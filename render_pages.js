@@ -60,7 +60,7 @@ async function createPost(){
     });
 
     let thePost = `<div>
-        <span style="font-size: 20px; color: #ffc93c;">@${result.data.username}</span>
+        <span style="font-size: 20px; color: #ffc93c;"><strong>@${result.data.username}</strong></span>
         <p style="font-size: 15px;">${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()} -- ${date.toLocaleTimeString()}</p>
         <br>
         <span style="font-size: 20px;">Experience: ${review}</span>
