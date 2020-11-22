@@ -26,12 +26,17 @@
   "cookie": {
     "username": "cookie",
     "password": "monster",
-    "img": "https://pbs.twimg.com/profile_images/1092451626781163523/0YzJMi-8.jpg"
+    "location": [
+      "1"
+    ]
   },
   "chelsea": {
     "username": "chelsea",
     "password": "pass1",
-    "img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/University_of_North_Carolina_at_Chapel_Hill_seal.svg/1200px-University_of_North_Carolina_at_Chapel_Hill_seal.svg.png"
+    "location": [
+      "13",
+      "4"
+    ]
   },
   "rowe318": {
     "username": "rowe318",

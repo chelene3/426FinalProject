@@ -50,7 +50,7 @@ async function getInfoIds(id) {
     let prevTemp = `<div id="${id}" class="box" ><div onclick="locationPage(${result.data.secret.locationID})"><strong>${result.data.secret.location}</strong><p>Overall Rating:${result.data.secret.rating}</p>
         <br><p>${result.data.secret.review}</p>
    
-        <br>     <p>${date}</p>
+        <br>     <p>${date.substring(0, 15)}</p>
         </div>
         <button class="button" onclick="deletePost(${id}, ${result.data.secret.locationID})") >Delete</button></div>`;
     $("#prevPostsDiv").append(prevTemp);

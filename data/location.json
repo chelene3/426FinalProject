@@ -65,7 +65,38 @@
     ],
     "profilePic": "https://pbs.twimg.com/profile_images/1115998274564108294/aUwa5l5E.png",
     "coverPic": "https://1.bp.blogspot.com/-jTbMtJpJoDo/T66EnKPBIBI/AAAAAAAACQM/iu-YiZGAQfs/s1600/DSC01232.JPG",
-    "posts": []
+    "posts": [
+      {
+        "review": "Shorten the date",
+        "noise": "0",
+        "prod": "0",
+        "price": "0",
+        "overall": "0",
+        "date": "2020-11-22T22:21:55.943Z",
+        "secretID": 11,
+        "username": "chelsea"
+      },
+      {
+        "review": "where did my post go?",
+        "noise": "2",
+        "prod": "0",
+        "price": "0",
+        "overall": "4",
+        "date": "2020-11-22T22:20:09.400Z",
+        "secretID": 9,
+        "username": "chelsea"
+      },
+      {
+        "review": "Only add the month?",
+        "noise": "0",
+        "prod": "0",
+        "price": "0",
+        "overall": "0",
+        "date": "2020-11-22T22:19:43.115Z",
+        "secretID": 8,
+        "username": "chelsea"
+      }
+    ]
   },
   "3": {
     "id": 3,
@@ -151,7 +182,18 @@
     ],
     "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfYxL4kp_-HZs9UfWSvWXKJmCXc1J_8GgYSA&usqp=CAU",
     "coverPic": "https://www.lwa-architects.com/wp-content/uploads/2015/04/UNC-Global_Interior-atrium-1700x1133.jpg",
-    "posts": []
+    "posts": [
+      {
+        "review": "Try posting here",
+        "noise": "0",
+        "prod": "0",
+        "price": "0",
+        "overall": "0",
+        "date": "2020-11-22T22:20:22.877Z",
+        "secretID": 10,
+        "username": "chelsea"
+      }
+    ]
   },
   "6": {
     "id": 6,
@@ -351,7 +393,18 @@
     ],
     "profilePic": "https://caffedriade.com/wp-content/uploads/2020/03/b86848af-c632-49d8-a0fd-28a844718280.png",
     "coverPic": "https://s3-media0.fl.yelpcdn.com/bphoto/uKwdXKTIFh8wy6qteFN22Q/l.jpg",
-    "posts": []
+    "posts": [
+      {
+        "review": "Studying in the woods? Yes please! Go here when there's good weather and you're golden ",
+        "noise": "1",
+        "prod": "5",
+        "price": "3",
+        "overall": "4",
+        "date": "2020-11-22T22:18:16.525Z",
+        "secretID": 7,
+        "username": "chelsea"
+      }
+    ]
   },
   "14": {
     "id": 14,

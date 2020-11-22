@@ -52,3 +52,11 @@ ul.ui-autocomplete {
     border: 1px solid #ccc;
     border-color: rgba(0, 0, 0, 0.2);
 }
+
+#prevPostsDiv {
+    margin: 10px
+}
+
+#likedPostsDiv {
+    margin: 10px
+}
