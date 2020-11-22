@@ -74,7 +74,7 @@ async function createPost(){
     });
     const result = await axios( {
         method: 'get',
-        url: 'http://localhost:3003/user',
+        url: 'https://enigmatic-meadow-24377.herokuapp.com/user',
         withCredentials: true
 
     }).catch(() => {
