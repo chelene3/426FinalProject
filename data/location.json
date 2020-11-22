@@ -29,7 +29,18 @@
     ],
     "profilePic": "https://www.pngfind.com/pngs/m/121-1214516_starbucks-logo-png-starbucks-coffee-logo-png-transparent.png",
     "coverPic": "https://images.squarespace-cdn.com/content/v1/573a129b45bf21ac38391f4a/1549781924236-A7NN3GCVI3EK74QDF8P9/ke17ZwdGBToddI8pDm48kOFXL3LHYX-4icvdwK2AIK8UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcW7Jz4NYhdHm7lnF6TbK69wp-xmXPmNhvGiauV9eq8aH9Yg_QCneX7-F-vUHrX6G9/IMG_0546.JPG",
-    "posts": []
+    "posts": [
+      {
+        "review": "fixing the username but also chestnut praline latte",
+        "noise": "0",
+        "prod": "0",
+        "price": "0",
+        "overall": "0",
+        "date": "2020-11-22T20:42:36.485Z",
+        "secretID": 5,
+        "username": "cxsu"
+      }
+    ]
   },
   "2": {
     "id": 2,
@@ -54,9 +65,7 @@
     ],
     "profilePic": "https://pbs.twimg.com/profile_images/1115998274564108294/aUwa5l5E.png",
     "coverPic": "https://1.bp.blogspot.com/-jTbMtJpJoDo/T66EnKPBIBI/AAAAAAAACQM/iu-YiZGAQfs/s1600/DSC01232.JPG",
-    "posts": [
-      "<div>\n        <p style=\"color: #ffc93c\">@cxsu</p>\n        <p style=\"font-size: 15px;\">11/22/2020 -- 1:06:17 PM</p>\n        <br>\n        <h1>Experience: Currently only open on the first floor but really great place to grind on work!</h1><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Noise Rating: 0</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Productivity Rating: 5</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Price Rating: 0</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Overall Rating: 5</span><br>\n    </div>"
-    ]
+    "posts": []
   },
   "3": {
     "id": 3,
@@ -81,9 +90,7 @@
     ],
     "profilePic": "https://pbs.twimg.com/profile_images/1115998274564108294/aUwa5l5E.png",
     "coverPic": "https://snworksceo.imgix.net/dth/eb44de02-bb30-4071-b8c4-3fc87b309b1f.sized-1000x1000.JPG?w=1000",
-    "posts": [
-      "<div>\n        <p style=\"color: #ffc93c\">@claire</p>\n        <p style=\"font-size: 15px;\">11/22/2020 -- 2:32:57 PM</p>\n        <br>\n        <h1>Experience: The UL is great for hardcore studying! I get a little sleepy though...</h1><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Noise Rating: 0</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Productivity Rating: 5</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Price Rating: 0</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Overall Rating: 5</span><br>\n    </div>"
-    ]
+    "posts": []
   },
   "4": {
     "id": 4,
@@ -108,7 +115,18 @@
     ],
     "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfYxL4kp_-HZs9UfWSvWXKJmCXc1J_8GgYSA&usqp=CAU",
     "coverPic": "https://alumni.unc.edu/wp-content/uploads/2017/09/1020744-1600x1146.jpg",
-    "posts": []
+    "posts": [
+      {
+        "review": "lots of hustle and bustle but great location on campus!",
+        "noise": "3",
+        "prod": "3",
+        "price": "3",
+        "overall": "3",
+        "date": "2020-11-22T21:07:28.901Z",
+        "secretID": 6,
+        "username": "cxsu"
+      }
+    ]
   },
   "5": {
     "id": 5,
@@ -333,9 +351,7 @@
     ],
     "profilePic": "https://caffedriade.com/wp-content/uploads/2020/03/b86848af-c632-49d8-a0fd-28a844718280.png",
     "coverPic": "https://s3-media0.fl.yelpcdn.com/bphoto/uKwdXKTIFh8wy6qteFN22Q/l.jpg",
-    "posts": [
-      "<div>\n        <p style=\"color: #ffc93c\">@cxsu</p>\n        <p style=\"font-size: 15px;\">11/22/2020 -- 12:54:26 PM</p>\n        <br>\n        <h1>Experience: feels like fairy garden!</h1><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Noise Rating: 3</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Productivity Rating: 3</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Price Rating: 3</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Overall Rating: 3</span><br>\n    </div>"
-    ]
+    "posts": []
   },
   "14": {
     "id": 14,
@@ -385,9 +401,7 @@
     ],
     "profilePic": "https://pbs.twimg.com/profile_images/1115998274564108294/aUwa5l5E.png",
     "coverPic": "https://unchistory.web.unc.edu/files/2017/11/Modern-Wilson-624x416.png",
-    "posts": [
-      "<div>\n        <p style=\"color: #ffc93c\">@chelsea</p>\n        <p style=\"font-size: 15px;\">11/21/2020 -- 6:18:38 PM</p>\n        <br>\n        <h1>Experience: Too quiet, i dont like it</h1><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Noise Rating: 0</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Productivity Rating: 5</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Price Rating: 0</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Overall Rating: 2</span><br>\n    </div>"
-    ]
+    "posts": []
   },
   "16": {
     "id": 16,
@@ -412,9 +426,7 @@
     ],
     "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfYxL4kp_-HZs9UfWSvWXKJmCXc1J_8GgYSA&usqp=CAU",
     "coverPic": "https://carolinaunion.unc.edu/sites/carolinaunion.unc.edu/files/styles/adaptive/public/feature_images/20200513_FrontofUnion-2.jpg?itok=nBUFk04V",
-    "posts": [
-      "<div>\n        <p style=\"color: #ffc93c\">@cookie</p>\n        <p style=\"font-size: 15px;\">11/21/2020 -- 6:23:17 PM</p>\n        <br>\n        <h1>Experience: Bagels here not as good as cookies but still very good</h1><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Noise Rating: 3</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Productivity Rating: 4</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Price Rating: 3</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Overall Rating: 5</span><br>\n    </div>"
-    ]
+    "posts": []
   },
   "17": {
     "id": 17,
@@ -464,8 +476,6 @@
     ],
     "profilePic": "https://images.squarespace-cdn.com/content/521b6de9e4b03aa034dec5dc/1520905572788-EED1J7TKC3W7T6J6GUAM/carolinacoffeeshop-logo-v1-reverse.png?content-type=image%2Fpng",
     "coverPic": "https://images.squarespace-cdn.com/content/v1/521b6de9e4b03aa034dec5dc/1597009876899-F4NXXL6EYQ153E9VZVG2/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/Front.jpeg?format=1500w",
-    "posts": [
-      "<div>\n        <p style=\"color: #ffc93c\">@chelsea</p>\n        <p style=\"font-size: 15px;\">11/21/2020 -- 6:21:35 PM</p>\n        <br>\n        <h1>Experience: Not a great place to study. I like it much better for eating a meal with family </h1><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Noise Rating: 4</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Productivity Rating: 1</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Price Rating: 4</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Overall Rating: 2</span><br>\n    </div>"
-    ]
+    "posts": []
   }
 }
