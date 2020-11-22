@@ -30,6 +30,7 @@
     "profilePic": "https://www.pngfind.com/pngs/m/121-1214516_starbucks-logo-png-starbucks-coffee-logo-png-transparent.png",
     "coverPic": "https://images.squarespace-cdn.com/content/v1/573a129b45bf21ac38391f4a/1549781924236-A7NN3GCVI3EK74QDF8P9/ke17ZwdGBToddI8pDm48kOFXL3LHYX-4icvdwK2AIK8UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcW7Jz4NYhdHm7lnF6TbK69wp-xmXPmNhvGiauV9eq8aH9Yg_QCneX7-F-vUHrX6G9/IMG_0546.JPG",
     "posts": [
+      "<div>\n        <p style=\"color: #ffc93c\">@cookie</p>\n        <p style=\"font-size: 15px;\">11/21/2020 -- 6:23:58 PM</p>\n        <br>\n        <h1>Experience: Good cookies here. </h1><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Noise Rating: 3</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Productivity Rating: 1</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Price Rating: 1</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Overall Rating: 2</span><br>\n    </div>",
       "<div>\n        <p style=\"color: #ffc93c\">@chelsea</p>\n        <p style=\"font-size: 15px;\">11/21/2020 -- 6:17:51 PM</p>\n        <br>\n        <h1>Experience: A great place to study right on Franklin St. The tables were too small for me though so my friends and either go alone or with just one friend</h1><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Noise Rating: 0</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Productivity Rating: 0</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Price Rating: 0</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Overall Rating: 0</span><br>\n    </div>"
     ]
   },
@@ -416,7 +417,9 @@
     ],
     "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfYxL4kp_-HZs9UfWSvWXKJmCXc1J_8GgYSA&usqp=CAU",
     "coverPic": "https://carolinaunion.unc.edu/sites/carolinaunion.unc.edu/files/styles/adaptive/public/feature_images/20200513_FrontofUnion-2.jpg?itok=nBUFk04V",
-    "posts": []
+    "posts": [
+      "<div>\n        <p style=\"color: #ffc93c\">@cookie</p>\n        <p style=\"font-size: 15px;\">11/21/2020 -- 6:23:17 PM</p>\n        <br>\n        <h1>Experience: Bagels here not as good as cookies but still very good</h1><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Noise Rating: 3</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Productivity Rating: 4</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Price Rating: 3</span><br>\n        <span style=\"font-size: 20px; color: #3282b8;\">Overall Rating: 5</span><br>\n    </div>"
+    ]
   },
   "17": {
     "id": 17,
