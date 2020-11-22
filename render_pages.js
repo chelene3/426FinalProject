@@ -1,14 +1,12 @@
 let username = "";
 
 const location1 = async  (num) =>{
-    console.log("location1");
     try{
         const res = await axios({
             method: 'get',
             //url: `https://rocky-chamber-40639.herokuapp.com/location/${num}`, //HEROKU
             url: `http://localhost:3000/location/${num}` //LOCAL
         })
-        console.log(res.data);
 
       $('#mainTitle').append(`<p>${res.data.name}</p>`);
       $('#address').append(`<p>${res.data.address}</p>`)
@@ -22,7 +20,6 @@ const location1 = async  (num) =>{
       $('#covid').append(`<p>${res.data.covid}</p>`);
       $('#post').on('click', createPost);
 
-      console.log("about to get posts");
       getPosts(num);
     }catch(err){
         console.error(err);
@@ -30,8 +27,6 @@ const location1 = async  (num) =>{
 }
 
 async function getPosts(id){
-    console.log("getting posts");
-    console.log(id);
     let location = await axios({
         method: 'get',
         url: `http://localhost:3000/location/${id}`,
@@ -43,12 +38,10 @@ async function getPosts(id){
             <p>${post[i]}</p>
         </div>`;
     }
-    console.log(oldPosts);
     $("#thefeed").append(oldPosts);
 }
 
 async function createPost(){
-    console.log("creating post");
     let id=name;
     let review = $("#experience").val();
     let noise = $("#noiseval").val();
@@ -65,7 +58,7 @@ async function createPost(){
     }).catch(() => {
        alert("Login to create a post!")
     });
-    
+
     let thePost = `<div>
         <p style="color: #ffc93c">@${result.data.username}</p>
         <p style="font-size: 15px;">${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()} -- ${date.toLocaleTimeString()}</p>
@@ -76,16 +69,13 @@ async function createPost(){
         <span style="font-size: 20px; color: #3282b8;">Price Rating: ${price}</span><br>
         <span style="font-size: 20px; color: #3282b8;">Overall Rating: ${overall}</span><br>
     </div>`;
-    console.log(thePost);
     //getting location
-    console.log("getting posts");
     let location = await axios({
         method: 'get',
         url: `http://localhost:3000/location/${id}`,
     });
     location.data.posts.unshift(thePost);
     let newData = location.data;
-    console.log(newData);
 
     // updating locations database
     try{
@@ -100,19 +90,20 @@ async function createPost(){
     }
 
     // updating user secrets
-    // try{
-    //     const result2 = await axios({
-    //         method: 'put',
-    //         url: `http://localhost:3005/login/${id}`,
-    //         data: {
-    //             secret: review,
-    //         },
-    //         withCredentials: true
-    //     });
-    // }catch(err){
-    //     console.error(err);
-    // }
-    console.log("here");
+    try{
+        const result2 = await axios({
+            method: 'post',
+            //url: `http://localhost:3005/login/${id}`,
+            data: {
+                username: result.data.username,
+                secret: review,
+                location: name, 
+            },
+            withCredentials: true
+        });
+    }catch(err){
+        console.error(err);
+    }
     $('#thefeed').append(thePost);
     return thePost;
 }
