@@ -104,7 +104,7 @@ async function createPost(){
     }catch(err){
         console.error(err);
     }
-    $('#thefeed').append(thePost);
+    $('#thefeed').append(`<div class="box">${thePost}<div>`);
     return thePost;
 }
 
