@@ -6,11 +6,17 @@
   },
   "cxsu": {
     "username": "cxsu",
-    "password": "password"
+    "password": "password",
+    "location": [
+      "2"
+    ]
   },
   "claire": {
     "username": "claire",
-    "password": "password"
+    "password": "password",
+    "location": [
+      "3"
+    ]
   },
   "crowe": {
     "username": "crowe",

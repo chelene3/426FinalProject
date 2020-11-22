@@ -54,6 +54,23 @@ app.post('/createUser', (req, res) =>{
   }
 })
 
+app.put('/editUser', (req,res) => {
+    if (req.session.user == undefined) {
+        res.status(403).send("Unauthorized");
+        return;
+    }
+    let user = req.body.username;
+    let data = req.body
+    if(login_data.get(user)== null){
+        res.status(404).send("User Not found");
+        return;
+    }
+  
+    login_data.set(user, data);
+
+    res.json(data);
+})
+
 app.post('/login', (req,res) => {
     let user = req.body.username;
     let password = req.body.password;
