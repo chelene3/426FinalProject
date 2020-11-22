@@ -62,6 +62,8 @@ async function createPost(){
         url: 'http://localhost:3003/user',
         withCredentials: true
 
+    }).catch(() => {
+       alert("Login to create a post!")
     });
     
     let thePost = `<div class="box">
