@@ -65,10 +65,10 @@ async function createPost(){
         <br>
         <span style="font-size: 20px;">Experience: ${review}</span>
         <br>
-        <span style="font-size: 10px; color: #3282b8;">Noise Rating: ${noise}</span><br>
-        <span style="font-size: 10px; color: #3282b8;">Productivity Rating: ${prod}</span><br>
-        <span style="font-size: 10px; color: #3282b8;">Price Rating: ${price}</span><br>
-        <span style="font-size: 10px; color: #3282b8;">Overall Rating: ${overall}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Noise Rating: ${noise}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Productivity Rating: ${prod}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Price Rating: ${price}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Overall Rating: ${overall}</span><br>
     </div>`;
     //getting location
     let location = await axios({
