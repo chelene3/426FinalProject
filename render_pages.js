@@ -60,14 +60,14 @@ async function createPost(){
     });
 
     let thePost = `<div>
-        <p style="color: #ffc93c">@${result.data.username}</p>
+        <span style="font-size: 20px; color: #ffc93c;">@${result.data.username}</span>
         <p style="font-size: 15px;">${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()} -- ${date.toLocaleTimeString()}</p>
         <br>
-        <h1>Experience: ${review}</h1><br>
-        <span style="font-size: 20px; color: #3282b8;">Noise Rating: ${noise}</span><br>
-        <span style="font-size: 20px; color: #3282b8;">Productivity Rating: ${prod}</span><br>
-        <span style="font-size: 20px; color: #3282b8;">Price Rating: ${price}</span><br>
-        <span style="font-size: 20px; color: #3282b8;">Overall Rating: ${overall}</span><br>
+        <span style="font-size: 20px;">Experience: ${review}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Noise Rating: ${noise}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Productivity Rating: ${prod}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Price Rating: ${price}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Overall Rating: ${overall}</span><br>
     </div>`;
     //getting location
     let location = await axios({
