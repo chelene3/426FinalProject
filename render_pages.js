@@ -66,14 +66,15 @@ async function createPost(){
        alert("Login to create a post!")
     });
     
-    let thePost = `<div class="box">
-        <p>@${result.data.username}</p>
-        <p>${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()} -- ${date.toLocaleTimeString()}</p>
-        <h1>Experience: ${review}</h1>
-        <h1>Noise Rating: ${noise}</h1>
-        <h1>Productivity Rating: ${prod}</h1>
-        <h1>Price Rating: ${price}</h1>
-        <h1>Overall Rating: ${overall}</h1>
+    let thePost = `<div>
+        <p style="color: #ffc93c">@${result.data.username}</p>
+        <p style="font-size: 15px;">${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()} -- ${date.toLocaleTimeString()}</p>
+        <br>
+        <h1>Experience: ${review}</h1><br>
+        <span style="font-size: 20px; color: #3282b8;">Noise Rating: ${noise}</span><br>
+        <span style="font-size: 20px; color: #3282b8;">Productivity Rating: ${prod}</span><br>
+        <span style="font-size: 20px; color: #3282b8;">Price Rating: ${price}</span><br>
+        <span style="font-size: 20px; color: #3282b8;">Overall Rating: ${overall}</span><br>
     </div>`;
     console.log(thePost);
     //getting location
