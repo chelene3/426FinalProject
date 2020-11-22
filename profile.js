@@ -1,6 +1,7 @@
 $(function () {
     getUserInfo();
     getSecrets();
+    getLocationIDs();
 });   
 
 // gets the user information from the user logged in
@@ -44,19 +45,47 @@ async function getInfoIds(id) {
     })
 
     console.log(result.data);
-    // appending liked posts on profile page, just appending secrets right now
-    let htmlTemp = `<div class="box"><p>${result.data.secret}</p></div>`;
-    $("#likedPostsDiv").append(htmlTemp);
-
+    let date = Date(result.data.secret.date);
     // appending previous posts on profile page, just appending secrets right now
-    let prevTemp = `<div class="box"><p>${result.data.secret}</p></div>`;
+    let prevTemp = `<div class="box" onclick="locationPage(${result.data.secret.locationID})"><strong>${result.data.secret.location}</strong><p>Overall Rating:${result.data.secret.rating}</p>
+        <br><p>${result.data.secret.review}</p>
+   
+        <br>     <p>${date}</p></div>`;
     $("#prevPostsDiv").append(prevTemp);
 
     // need to attach like objects to posts and associate them with users in the secret file
-
-
 }
 
+//get all the saved location IDs from user info
+async function getLocationIDs(){
+    const userResult = await axios( {
+        method: 'get',
+        url: 'http://localhost:3003/user',
+        withCredentials: true
+
+    });
+    userResult.data.location.forEach(function(id){
+        addLocations(id);
+    });
+}
+
+//create html div for each location
+async function addLocations(id){
+    let location = await axios({
+        method: 'get',
+        url: `http://localhost:3000/location/${id}`,
+    });
+    // appending liked posts on profile page, just appending secrets right now
+    let htmlTemp = `<div class="box" onclick="locationPage(${location.data.id})"><strong>${location.data.name}</strong>
+    <br></div>`;
+
+    $("#likedPostsDiv").append(htmlTemp);
+}
+
+//navigate to the locationpage of the selected post
+function locationPage(id){
+    window.location.href = "mock_location_page.html?name=" + id;
+}
 const registerLogoutButton = function () {
     document.querySelectorAll("#logout").forEach(item => {
         item.addEventListener("click", handleLogoutButtonPress);

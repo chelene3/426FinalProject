@@ -18,8 +18,8 @@ const location1 = async  (num) =>{
       </iframe>`)
       $('#desc').append(`<p>${res.data.des}</p>`);
       $('#covid').append(`<p>${res.data.covid}</p>`);
-      $('#post').on('click', createPost);
-
+    //   $('#post').on('click', createPost);
+        console.log(res);
       getPosts(num);
     }catch(err){
         console.error(err);
@@ -42,6 +42,7 @@ async function getPosts(id){
 }
 
 async function createPost(){
+    // preventDefault();
     let id=name;
     let review = $("#experience").val();
     let noise = $("#noiseval").val();
@@ -88,19 +89,26 @@ async function createPost(){
     }catch(err){
         console.error(err);
     }
-
+    //teh secret object we're passing in
+    let reviewObj = {
+        review: review,
+        location: location.data.name,
+        date: date,
+        rating: overall,
+        locationID: name
+    }
     // updating user secrets
     try{
         const result2 = await axios({
             method: 'post',
-            //url: `http://localhost:3005/login/${id}`,
+            url: `http://localhost:3003/secret/`,
             data: {
                 username: result.data.username,
-                secret: review,
-                location: name, 
+                secret: reviewObj,
             },
             withCredentials: true
         });
+        console.log(result2);
     }catch(err){
         console.error(err);
     }
@@ -111,11 +119,99 @@ async function createPost(){
 let filePath = location.href;
 let fileURL = new URL(filePath)
 let name = fileURL.searchParams.get("name");
-location1(name);
-//$('#thefeed').append(getPosts(1));
+// location1(name);
+$(document).ready(function(){
+    location1(name);
+    checkSaved();
+}
+);
 
 
 
+
+let saved = false;
+//check if the location is saved and append the correct icon
+async function checkSaved(){
+    const userResult = await axios( {
+        method: 'get',
+        url: 'http://localhost:3003/user',
+        withCredentials: true
+    });
+    if(userResult.data.location == undefined){
+        let saveIcon =  `<a  class="level-item" onClick ="saveLocation()">
+            <span class="icon is-small"><i id="savedIcon" class="fas fa-heart has-text-white"></i></span>
+        </a>`;
+        $('#saved').append(saveIcon);
+        return;
+    }
+    userResult.data.location.forEach(function(x){
+        if(x == name){
+            saved = true;
+            let saveIcon =  `<a  class="level-item" onClick ="saveLocation()">
+            <span class="icon is-small"><i id="savedIcon" class="fas fa-heart has-text-danger"></i></span>
+          </a>`;
+            $('#saved').append(saveIcon);
+            return;
+        }
+    });     
+    if(!saved){let saveIcon =  `<a  class="level-item" onClick ="saveLocation()">
+    <span class="icon is-small"><i id="savedIcon" class="fas fa-heart has-text-white"></i></span>
+  </a>`;
+    $('#saved').append(saveIcon);}
+
+}
+
+//update the user saved location info for like/unlike
+async function saveLocation(){
+    
+    try{
+        const userResult = await axios( {
+            method: 'get',
+            url: 'http://localhost:3003/user',
+            withCredentials: true
+    
+        }).catch(() => {
+           alert("Login to save a location!")
+        });
+
+
+        let location = userResult.data.location;
+        if(location == undefined){
+            location = [];
+        }
+        if(!saved){
+            location.push(name);
+        }
+        else{
+            location = location.filter(function(loc){
+                return loc!= name;
+            });
+        }
+      
+        const result = await axios({
+            method: 'put',
+            url: `http://localhost:3003/editUser/`,
+            data: {
+                username: userResult.data.username,
+                password: userResult.data.password,
+                location: location,
+            },
+            withCredentials: true
+        });
+        console.log(result);
+
+        if(!saved){
+            $('#savedIcon').removeClass('has-text-white');
+            $('#savedIcon').addClass('has-text-danger');
+        }else{
+            $('#savedIcon').removeClass('has-text-dagner');
+            $('#savedIcon').addClass('has-text-white');
+        }
+      
+    }catch(err){
+        console.error(err);
+    }
+}
 /*
  url for post: 'http://localhost:3000/location'
  url for put (update) : 'http://localhost:3000/location/{id}'

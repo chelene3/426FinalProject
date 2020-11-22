@@ -12,6 +12,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgyx6WujHOQ_HsN95DWfOIQ_1Uw9Yrt8k&callback=initMap&libraries=places&v=weekly"
       defer
     ></script> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="render_pages.js"></script>
@@ -26,6 +27,9 @@
     <section class="section has-background-info">
         <div class="content has-text-centered">
             <h1 class="has-text-info-light title-is-1" id="mainTitle"></h1>
+        </div>
+        <div id="saved">
+         
         </div>
     </section>
     <div class="columns">
@@ -73,7 +77,7 @@
                     </div>
                 </div>
                 <div class="control">
-                    <label for="noiseval" class="label">Noise Rating:</label>
+                    <label for="noiseval" class="label">Noise Level:</label>
                     <div class="select">
                       <select id="noiseval">
                         <option>0</option>
@@ -125,7 +129,7 @@
                     </div>
                   </div>
                 <div class="buttons is-right">
-                <button id="post" class="button is-info">Post</button>
+                <button id="post" onclick="createPost()" class="button is-info">Post</button>
                 </div>
             </div>
             <h1 class="title is-3" id="thefeed">Feed</h1>
