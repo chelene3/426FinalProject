@@ -1,26 +1,9 @@
-// var express = require('express');
-// const app = express();
-// const port = 3000;
-// var router = express.Router();
-
-// import { createRequire } from 'module';
-// const require = createRequire(import.meta.url);
-// var express = require('express');
-// const app = express();
-// var router = express.Router();
-
 $(function () {
-
-    // getAllIDsForUser(session.username);
-    // getUserInfo();
+    getUserInfo();
+    getSecrets();
 });   
-// var session;
-// app.get('/', function(req, res, next) {
-//     session = req.session;
-//     console.log("user is: " + session.username);
-// })
 
-// axios.defaults.withCredentials = true;
+// gets the user information from the user logged in
 async function getUserInfo(){
     const result = await axios( {
         method: 'get',
@@ -28,10 +11,17 @@ async function getUserInfo(){
         withCredentials: true
 
     });
-    console.log(result.data);
-    $('#username').append(`<p>${result.data.username}</p>`);
-
+    // appending the username onto profile page
+    let nameTemp = `<h2><b>${result.data.username}</b></h2>`;
+    $('#username').append(nameTemp);
+    if (result.data.img != undefined) {
+        $('#profpic').replaceWith(`<img src=${result.data.img} alt="Profile Avatar" width="200" heigh="200">`)
+    }
+        $("#name").append(`<button class="button is-light" id="logout">Logout</button><br><br>`)
+    registerLogoutButton();
 }
+
+// gets the secrets from the current user logged in
 async function getSecrets(){
     const result = await axios( {
         method: 'get',
@@ -39,10 +29,48 @@ async function getSecrets(){
         withCredentials: true
 
     });
+    // calls func to get more info on the secrets once we have the id from the result
+    for(let i = 0; i < result.data.length; i++) {
+        getInfoIds(result.data[i]);   
+    }  
+}
+
+// gets more info on the secrets from an id parameter
+async function getInfoIds(id) {
+    const result = await axios( {
+        method: 'get',
+        url: `https://enigmatic-meadow-24377.herokuapp.com/secret/${id}`,
+        withCredentials: true
+    })
+
     console.log(result.data);
-    $('#username').append(result.data.username);
+    // appending liked posts on profile page, just appending secrets right now
+    let htmlTemp = `<div class="box"><p>${result.data.secret}</p></div>`;
+    $("#likedPostsDiv").append(htmlTemp);
+
+    // appending previous posts on profile page, just appending secrets right now
+    let prevTemp = `<div class="box"><p>${result.data.secret}</p></div>`;
+    $("#prevPostsDiv").append(prevTemp);
+
+    // need to attach like objects to posts and associate them with users in the secret file
+
 
 }
-getSecrets();
 
-getUserInfo();
+const registerLogoutButton = function () {
+    document.querySelectorAll("#logout").forEach(item => {
+        item.addEventListener("click", handleLogoutButtonPress);
+    })
+  }
+
+const handleLogoutButtonPress = function (event) {
+    const result = axios( {
+        method: 'get',
+        url: `https://enigmatic-meadow-24377.herokuapp.com/logout`,
+        withCredentials: true
+    })
+    window.location.href="index.html"
+};
+
+
+//'https://enigmatic-meadow-24377.herokuapp.com/user'
