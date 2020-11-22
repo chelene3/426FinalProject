@@ -26,6 +26,21 @@ const location1 = async  (num) =>{
     }
 }
 
+// async function getPosts(id){
+//     let location = await axios({
+//         method: 'get',
+//         url: `http://localhost:3000/location/${id}`,
+//     });
+//     let post = location.data.posts;
+//     let oldPosts = "";
+//     for(let i=0; i<post.length; i++){
+//         oldPosts += `<div class="box">
+//             <p>${post[i]}</p>
+//         </div>`;
+//     }
+//     $("#thefeed").append(oldPosts);
+// }
+
 async function getPosts(id){
     let location = await axios({
         method: 'get',
@@ -35,14 +50,13 @@ async function getPosts(id){
     let oldPosts = "";
     for(let i=0; i<post.length; i++){
         oldPosts += `<div class="box">
-            <p>${post[i]}</p>
+            <p>${postify(post[i])}</p>
         </div>`;
     }
     $("#thefeed").append(oldPosts);
 }
 
 async function createPost(){
-    // preventDefault();
     let id=name;
     let review = $("#experience").val();
     let noise = $("#noiseval").val();
@@ -51,6 +65,13 @@ async function createPost(){
     let overall = $("#overallval").val();
     let date = new Date();
     let locationID = name;
+    let secretID;
+    let username = "";
+       //getting location
+       let location = await axios({
+        method: 'get',
+        url: `http://localhost:3000/location/${id}`,
+    });
     const result = await axios( {
         method: 'get',
         url: 'http://localhost:3003/user',
@@ -59,36 +80,7 @@ async function createPost(){
     }).catch(() => {
        alert("Login to create a post!")
     });
-
-    let thePost = `<div>
-        <p style="color: #ffc93c">@${result.data.username}</p>
-        <p style="font-size: 15px;">${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()} -- ${date.toLocaleTimeString()}</p>
-        <br>
-        <h1>Experience: ${review}</h1><br>
-        <span style="font-size: 20px; color: #3282b8;">Noise Rating: ${noise}</span><br>
-        <span style="font-size: 20px; color: #3282b8;">Productivity Rating: ${prod}</span><br>
-        <span style="font-size: 20px; color: #3282b8;">Price Rating: ${price}</span><br>
-        <span style="font-size: 20px; color: #3282b8;">Overall Rating: ${overall}</span><br>
-    </div>`;
-    //getting location
-    let location = await axios({
-        method: 'get',
-        url: `http://localhost:3000/location/${id}`,
-    });
-    location.data.posts.unshift(thePost);
-    let newData = location.data;
-
-    // updating locations database
-    try{
-        const result1 = await axios({
-            method: 'put',
-            url: `http://localhost:3000/location/${id}`,
-            data: newData,
-            withCredentials: true,
-        });
-    }catch(err){
-        console.error(err);
-    }
+    username= result.data.username;
     //teh secret object we're passing in
     let reviewObj = {
         review: review,
@@ -109,12 +101,116 @@ async function createPost(){
             withCredentials: true
         });
         console.log(result2);
+        secretID = result2.data.id;
     }catch(err){
         console.error(err);
     }
-    $('#thefeed').append(thePost);
+    let postObj = {review: review, noise: noise, prod:prod, price: price, overall:overall, date:date, secretID: secretID, username: username};
+  
+    location.data.posts.unshift(postObj);
+    let newData = location.data;
+
+    // updating locations database
+    try{
+        const result1 = await axios({
+            method: 'put',
+            url: `http://localhost:3000/location/${id}`,
+            data: newData,
+            withCredentials: true,
+        });
+    }catch(err){
+        console.error(err);
+    }
+    $('#thefeed').append(postify(postObj));
+}
+
+function postify(data){
+    let thePost = `<div>
+        <p style="color: #ffc93c">@${data.username}</p>
+        <p style="font-size: 15px;">${data.date}</p>
+        <br>
+        <h1>Experience: ${data.review}</h1><br>
+        <span style="font-size: 20px; color: #3282b8;">Noise Rating: ${data.noise}</span><br>
+        <span style="font-size: 20px; color: #3282b8;">Productivity Rating: ${data.prod}</span><br>
+        <span style="font-size: 20px; color: #3282b8;">Price Rating: ${data.price}</span><br>
+        <span style="font-size: 20px; color: #3282b8;">Overall Rating: ${data.overall}</span><br>
+    </div>`;
     return thePost;
 }
+// async function createPost(){
+//     // preventDefault();
+//     let id=name;
+//     let review = $("#experience").val();
+//     let noise = $("#noiseval").val();
+//     let prod = $("#prodval").val();
+//     let price = $("#priceval").val();
+//     let overall = $("#overallval").val();
+//     let date = new Date();
+//     let locationID = name;
+//     const result = await axios( {
+//         method: 'get',
+//         url: 'http://localhost:3003/user',
+//         withCredentials: true
+
+//     }).catch(() => {
+//        alert("Login to create a post!")
+//     });
+
+//     let thePost = `<div>
+//         <p style="color: #ffc93c">@${result.data.username}</p>
+//         <p style="font-size: 15px;">${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()} -- ${date.toLocaleTimeString()}</p>
+//         <br>
+//         <h1>Experience: ${review}</h1><br>
+//         <span style="font-size: 20px; color: #3282b8;">Noise Rating: ${noise}</span><br>
+//         <span style="font-size: 20px; color: #3282b8;">Productivity Rating: ${prod}</span><br>
+//         <span style="font-size: 20px; color: #3282b8;">Price Rating: ${price}</span><br>
+//         <span style="font-size: 20px; color: #3282b8;">Overall Rating: ${overall}</span><br>
+//     </div>`;
+//     //getting location
+//     let location = await axios({
+//         method: 'get',
+//         url: `http://localhost:3000/location/${id}`,
+//     });
+//     location.data.posts.unshift(thePost);
+//     let newData = location.data;
+
+//     // updating locations database
+//     try{
+//         const result1 = await axios({
+//             method: 'put',
+//             url: `http://localhost:3000/location/${id}`,
+//             data: newData,
+//             withCredentials: true,
+//         });
+//     }catch(err){
+//         console.error(err);
+//     }
+//     //teh secret object we're passing in
+//     let reviewObj = {
+//         review: review,
+//         location: location.data.name,
+//         date: date,
+//         rating: overall,
+//         locationID: name
+//     }
+//     // updating user secrets
+//     try{
+//         const result2 = await axios({
+//             method: 'post',
+//             url: `http://localhost:3003/secret/`,
+//             data: {
+//                 username: result.data.username,
+//                 secret: reviewObj,
+//             },
+//             withCredentials: true
+//         });
+//         console.log(result2);
+//     }catch(err){
+//         console.error(err);
+//     }
+//     $('#thefeed').append(thePost);
+//     return thePost;
+// }
 
 let filePath = location.href;
 let fileURL = new URL(filePath)
