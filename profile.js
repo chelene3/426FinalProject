@@ -116,6 +116,7 @@ try{
 }catch(err){
     console.log(err);
 }
+location.reload();
 }
 //navigate to the locationpage of the selected post
 function locationPage(id){

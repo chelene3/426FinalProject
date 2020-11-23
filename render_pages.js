@@ -122,6 +122,7 @@ async function createPost(){
         console.error(err);
     }
     $('#thefeed').append(postify(postObj));
+    location.reload();
 }
 
 function postify(data){
