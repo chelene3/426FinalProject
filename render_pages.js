@@ -18,6 +18,12 @@ const location1 = async  (num) =>{
       </iframe>`)
       $('#desc').append(`<p>${res.data.des}</p>`);
       $('#covid').append(`<p>${res.data.covid}</p>`);
+      $('#noise').append(`<p>${res.data.noise}</p>`);
+      $('#prod').append(`<p>${res.data.prod}</p>`);
+      $('#price').append(`<p>${res.data.price}</p>`);
+      let average = Math.round((res.data.noise +res.data.prod + res.data.price)/3);
+      $('#rate').append(`<p>${average}</p>`);
+
     //   $('#post').on('click', createPost);
         console.log(res);
       getPosts(num);
