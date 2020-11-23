@@ -42,9 +42,9 @@ $(document).on('click', '#createaccount-submit', async function(event) {
                 password: `${password1}`
             },
             withCredentials: true
+        }).then(() => {
+            alert("New User Created")
         });
-        console.log(results.data);
-        alert("New User Created")
     }
 })
 })
