@@ -23,13 +23,7 @@ const location1 = async  (num) =>{
       </iframe>`)
       $('#desc').append(`<p>${res.data.des}</p>`);
       $('#covid').append(`<p>${res.data.covid}</p>`);
-    //   $('#noise').append(`<p>${res.data.noise}</p>`);
-    //   $('#prod').append(`<p>${res.data.prod}</p>`);
-    //   $('#price').append(`<p>${res.data.price}</p>`);
-    //   let average = Math.round((res.data.noise +res.data.prod + res.data.price)/3);
-    //   $('#rate').append(`<p>${average}</p>`);
 
-    //   $('#post').on('click', createPost);
         console.log(res);
         noise =0;
         prod = 0;
@@ -46,6 +40,7 @@ const location1 = async  (num) =>{
   
 }
 
+//appends updated ratings 
 function addRatings(){
     console.log(noise); 
     if(numPosts == 0){
@@ -56,21 +51,8 @@ function addRatings(){
     $('#price').append(`<span>${(price/numPosts).toFixed(2)}</span>`);
     $('#rate').append(`<span>${(overall/numPosts).toFixed(2)}</span>`);
 }
-// async function getPosts(id){
-//     let location = await axios({
-//         method: 'get',
-//         url: `http://localhost:3000/location/${id}`,
-//     });
-//     let post = location.data.posts;
-//     let oldPosts = "";
-//     for(let i=0; i<post.length; i++){
-//         oldPosts += `<div class="box">
-//             <p>${post[i]}</p>
-//         </div>`;
-//     }
-//     $("#thefeed").append(oldPosts);
-// }
 
+//gets and appends all posts from current location
 async function getPosts(id){
     let location = await axios({
         method: 'get',
@@ -94,6 +76,8 @@ async function getPosts(id){
     return post.length;
 }
 
+
+//creates new post and updates users and location
 async function createPost(){
     let id=name;
     let review = $("#experience").val();
@@ -162,6 +146,7 @@ async function createPost(){
     $('#thefeed').append(postify(postObj));
 }
 
+
 function postify(data){
     let thePost = `<div>
         <p style="color: #ffc93c">@${data.username}</p>
@@ -176,85 +161,11 @@ function postify(data){
     return thePost;
 }
 
-// async function createPost(){
-//     // preventDefault();
-//     let id=name;
-//     let review = $("#experience").val();
-//     let noise = $("#noiseval").val();
-//     let prod = $("#prodval").val();
-//     let price = $("#priceval").val();
-//     let overall = $("#overallval").val();
-//     let date = new Date();
-//     let locationID = name;
-//     const result = await axios( {
-//         method: 'get',
-//         url: 'http://localhost:3003/user',
-//         withCredentials: true
-
-//     }).catch(() => {
-//        alert("Login to create a post!")
-//     });
-
-//     let thePost = `<div>
-//         <p style="color: #ffc93c">@${result.data.username}</p>
-//         <p style="font-size: 15px;">${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()} -- ${date.toLocaleTimeString()}</p>
-//         <br>
-//         <h1>Experience: ${review}</h1><br>
-//         <span style="font-size: 20px; color: #3282b8;">Noise Rating: ${noise}</span><br>
-//         <span style="font-size: 20px; color: #3282b8;">Productivity Rating: ${prod}</span><br>
-//         <span style="font-size: 20px; color: #3282b8;">Price Rating: ${price}</span><br>
-//         <span style="font-size: 20px; color: #3282b8;">Overall Rating: ${overall}</span><br>
-//     </div>`;
-//     //getting location
-//     let location = await axios({
-//         method: 'get',
-//         url: `http://localhost:3000/location/${id}`,
-//     });
-//     location.data.posts.unshift(thePost);
-//     let newData = location.data;
-
-//     // updating locations database
-//     try{
-//         const result1 = await axios({
-//             method: 'put',
-//             url: `http://localhost:3000/location/${id}`,
-//             data: newData,
-//             withCredentials: true,
-//         });
-//     }catch(err){
-//         console.error(err);
-//     }
-//     //teh secret object we're passing in
-//     let reviewObj = {
-//         review: review,
-//         location: location.data.name,
-//         date: date,
-//         rating: overall,
-//         locationID: name
-//     }
-//     // updating user secrets
-//     try{
-//         const result2 = await axios({
-//             method: 'post',
-//             url: `http://localhost:3003/secret/`,
-//             data: {
-//                 username: result.data.username,
-//                 secret: reviewObj,
-//             },
-//             withCredentials: true
-//         });
-//         console.log(result2);
-//     }catch(err){
-//         console.error(err);
-//     }
-//     $('#thefeed').append(thePost);
-//     return thePost;
-// }
 
 let filePath = location.href;
 let fileURL = new URL(filePath)
 let name = fileURL.searchParams.get("name");
-// location1(name);
+
 $(document).ready(function(){
     location1(name);
     checkSaved();

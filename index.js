@@ -8,24 +8,22 @@ const Location = require('./location.js');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
-// app.use(function(req,res,next){
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     next();
-// })
 let cors = require('cors');
 
 const corsConfi = {
   origin: "http://localhost:3001",
   credentials: true
 }
+
 app.use(cors(corsConfi));
+
 app.get('/location', (req, res)=>{
     // res.header("Access-Control-Allow-Origin", "*");
     res.json(Location.getALLIDs());
     return;
 });
 
+//returns location specified by the ID
 app.get('/location/:id',(req, res)=> {
     let l = Location.findByID(req.params.id);
     if (l == null){
@@ -33,9 +31,9 @@ app.get('/location/:id',(req, res)=> {
         return;
     }
     res.json(l);
-
 });
 
+//creates new location
 app.post('/location', (req, res) => {
     let {name, address, lat ,long, dinein, takeout, indoorseats, outdoorseats, noise, rating, price, wifi, des, covid, hashtags, profilePic, coverPic, posts} = req.body;
 
@@ -45,9 +43,9 @@ app.post('/location', (req, res) => {
         return;
     }
     return res.json(l);
+});
 
-})
-
+//updates location specified by id
 app.put('/location/:id', (req,res)=> {
     let l = Location.findByID(req.params.id);
     if (l == null){
@@ -76,11 +74,11 @@ app.put('/location/:id', (req,res)=> {
     l.posts = posts;
 
     l.update();
-
     res.json(l);
 
 });
 
+//delete location specified by id
 app.delete('/location/:id', (req, res) => {
     let l = Location.findByID(req.params.id);
     if(l==null){

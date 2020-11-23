@@ -26,21 +26,14 @@ app.use(expressSession({
     //   secure: true, 
       maxAge: 5184000000
     }
-    
  }));
-// app.use(function(req, res, next){
-//     res.header('Access-Control-Allow-Credentials', true);
-//       res.header("Access-Control-Allow-Origin", "http://localhost:3002");
-//       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//       next();
-//   });
+
 
 const Secret= require("./secret.js");
 
 const login_data = require('data-store')({ path: process.cwd() + '/data/users.json' });
 
-let userId;
-
+//creates new User
 app.post('/createUser', (req, res) =>{
   let user = req.body.username;
   let data = req.body
@@ -54,6 +47,7 @@ app.post('/createUser', (req, res) =>{
   }
 })
 
+//edits user 
 app.put('/editUser', (req,res) => {
     if (req.session.user == undefined) {
         res.status(403).send("Unauthorized");
@@ -65,12 +59,12 @@ app.put('/editUser', (req,res) => {
         res.status(404).send("User Not found");
         return;
     }
-  
     login_data.set(user, data);
 
     res.json(data);
-})
+});
 
+//login user if username and password are correct
 app.post('/login', (req,res) => {
     let user = req.body.username;
     let password = req.body.password;
@@ -90,11 +84,13 @@ app.post('/login', (req,res) => {
     res.status(403).send("Unauthorized");
 });
 
+//logout user and ends current session
 app.get('/logout', (req, res) => {
     delete req.session.user;
     res.json(true);
 });
 
+//returns user information including saved locations
 app.get('/user', (req, res) => {
     if(req.session.user == undefined){
         res.status(404).send("no user logged in");
@@ -107,6 +103,7 @@ app.get('/user', (req, res) => {
     return;
 });
 
+//returns all secrets associated with current user
 app.get('/secret', (req, res) => {
     if (req.session.user == undefined) {
         res.status(403).send("Unauthorized");
@@ -117,6 +114,7 @@ app.get('/secret', (req, res) => {
     return;
 });
 
+//returns secret specified by ID
 app.get('/secret/:id', (req, res) => {
     if (req.session.user == undefined) {
         res.status(403).send("Unauthorized");
@@ -137,18 +135,15 @@ app.get('/secret/:id', (req, res) => {
     res.json(s);
 } );
 
+//creates new secret 
 app.post('/secret', (req, res)=> {
     if (req.session.user == undefined) {
         res.status(403).send("Unauthorized");
         return;
     }
-    // now the Secret create has another parameter called type
-    // type is either "previous" or "liked" string
-    // the create function creates an instance of Secret with boolean values for those types
-
-    // we need to check somehow to see if the user wants to have a previous post or liked post
+   
     let type = "previous";
-    // let type = "liked";
+
     let s = Secret.create(req.session.user, req.body.secret, type); 
     if (s == null) {
         res.status(400).send("Bad Request");
@@ -157,6 +152,7 @@ app.post('/secret', (req, res)=> {
     return res.json(s);
 });
 
+//updates secret
 app.put('/secret/:id', (req, res) => {
     if (req.session.user == undefined) {
         res.status(403).send("Unauthorized");
@@ -177,6 +173,7 @@ app.put('/secret/:id', (req, res) => {
     res.json(s.id);
 });
 
+//deletes secret
 app.delete('/secret/:id', (req, res) => {
     if (req.session.user == undefined) {
         res.status(403).send("Unauthorized");
