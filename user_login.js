@@ -44,7 +44,7 @@ $(document).on('click', '#createaccount-submit', async function(event) {
             withCredentials: true
         });
         console.log(results.data);
-       
+        alert("New User Created")
     }
 })
 })
