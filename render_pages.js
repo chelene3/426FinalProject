@@ -128,7 +128,7 @@ async function createPost(){
 function postify(data){
     let thePost = `<div>
         <p style="color: #ffc93c">@${data.username}</p>
-        <p style="font-size: 15px;">${data.date.substring(0,10)}</p>
+        <p style="font-size: 15px;">${data.date}</p>
         <br>
         <h1>Experience: ${data.review}</h1><br>
         <span style="font-size: 20px; color: #3282b8;">Noise Rating: ${data.noise}</span><br>
