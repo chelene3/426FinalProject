@@ -1,6 +1,11 @@
 let username = "";
-
+let noise = 0;
+let prod = 0;
+let price = 0;
+let overall = 0;
+let numPosts = 0;
 const location1 = async  (num) =>{
+    let numPosts = 5;
     try{
         const res = await axios({
             method: 'get',
@@ -18,20 +23,39 @@ const location1 = async  (num) =>{
       </iframe>`)
       $('#desc').append(`<p>${res.data.des}</p>`);
       $('#covid').append(`<p>${res.data.covid}</p>`);
-      $('#noise').append(`<p>${res.data.noise}</p>`);
-      $('#prod').append(`<p>${res.data.prod}</p>`);
-      $('#price').append(`<p>${res.data.price}</p>`);
-      let average = Math.round((res.data.noise +res.data.prod + res.data.price)/3);
-      $('#rate').append(`<p>${average}</p>`);
+    //   $('#noise').append(`<p>${res.data.noise}</p>`);
+    //   $('#prod').append(`<p>${res.data.prod}</p>`);
+    //   $('#price').append(`<p>${res.data.price}</p>`);
+    //   let average = Math.round((res.data.noise +res.data.prod + res.data.price)/3);
+    //   $('#rate').append(`<p>${average}</p>`);
 
     //   $('#post').on('click', createPost);
         console.log(res);
-      getPosts(num);
+        noise =0;
+        prod = 0;
+        price = 0;
+        overall = 0;
+        numPosts =0;
+      getPosts(num).then(onfulfilled=> addRatings());
+     
+
     }catch(err){
         console.error(err);
     }
+
+  
 }
 
+function addRatings(){
+    console.log(noise); 
+    if(numPosts == 0){
+        numPosts = 1;
+    }
+    $('#noise').append(`<span>${(noise/numPosts).toFixed(2)}</span>`);
+    $('#prod').append(`<span>${(prod/numPosts).toFixed(2)}</span>`);
+    $('#price').append(`<span>${(price/numPosts).toFixed(2)}</span>`);
+    $('#rate').append(`<span>${(overall/numPosts).toFixed(2)}</span>`);
+}
 // async function getPosts(id){
 //     let location = await axios({
 //         method: 'get',
@@ -58,8 +82,16 @@ async function getPosts(id){
         oldPosts += `<div class="box">
             <p>${postify(post[i])}</p>
         </div>`;
+        console.log(parseInt(post[i].noise));
+        noise += parseInt(post[i].noise);
+        console.log(noise);
+        prod += parseInt(post[i].prod);
+        price += parseInt(post[i].price);
+        overall += parseInt(post[i].overall);
+        numPosts+= 1;
     }
     $("#thefeed").append(oldPosts);
+    return post.length;
 }
 
 async function createPost(){
@@ -143,6 +175,7 @@ function postify(data){
     </div>`;
     return thePost;
 }
+
 // async function createPost(){
 //     // preventDefault();
 //     let id=name;
