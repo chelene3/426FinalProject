@@ -65,38 +65,7 @@
     ],
     "profilePic": "https://pbs.twimg.com/profile_images/1115998274564108294/aUwa5l5E.png",
     "coverPic": "https://1.bp.blogspot.com/-jTbMtJpJoDo/T66EnKPBIBI/AAAAAAAACQM/iu-YiZGAQfs/s1600/DSC01232.JPG",
-    "posts": [
-      {
-        "review": "Shorten the date",
-        "noise": "0",
-        "prod": "0",
-        "price": "0",
-        "overall": "0",
-        "date": "2020-11-22T22:21:55.943Z",
-        "secretID": 11,
-        "username": "chelsea"
-      },
-      {
-        "review": "where did my post go?",
-        "noise": "2",
-        "prod": "0",
-        "price": "0",
-        "overall": "4",
-        "date": "2020-11-22T22:20:09.400Z",
-        "secretID": 9,
-        "username": "chelsea"
-      },
-      {
-        "review": "Only add the month?",
-        "noise": "0",
-        "prod": "0",
-        "price": "0",
-        "overall": "0",
-        "date": "2020-11-22T22:19:43.115Z",
-        "secretID": 8,
-        "username": "chelsea"
-      }
-    ]
+    "posts": []
   },
   "3": {
     "id": 3,
@@ -182,18 +151,7 @@
     ],
     "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfYxL4kp_-HZs9UfWSvWXKJmCXc1J_8GgYSA&usqp=CAU",
     "coverPic": "https://www.lwa-architects.com/wp-content/uploads/2015/04/UNC-Global_Interior-atrium-1700x1133.jpg",
-    "posts": [
-      {
-        "review": "Try posting here",
-        "noise": "0",
-        "prod": "0",
-        "price": "0",
-        "overall": "0",
-        "date": "2020-11-22T22:20:22.877Z",
-        "secretID": 10,
-        "username": "chelsea"
-      }
-    ]
+    "posts": []
   },
   "6": {
     "id": 6,
@@ -393,18 +351,7 @@
     ],
     "profilePic": "https://caffedriade.com/wp-content/uploads/2020/03/b86848af-c632-49d8-a0fd-28a844718280.png",
     "coverPic": "https://s3-media0.fl.yelpcdn.com/bphoto/uKwdXKTIFh8wy6qteFN22Q/l.jpg",
-    "posts": [
-      {
-        "review": "Studying in the woods? Yes please! Go here when there's good weather and you're golden ",
-        "noise": "1",
-        "prod": "5",
-        "price": "3",
-        "overall": "4",
-        "date": "2020-11-22T22:18:16.525Z",
-        "secretID": 7,
-        "username": "chelsea"
-      }
-    ]
+    "posts": []
   },
   "14": {
     "id": 14,
@@ -529,6 +476,17 @@
     ],
     "profilePic": "https://images.squarespace-cdn.com/content/521b6de9e4b03aa034dec5dc/1520905572788-EED1J7TKC3W7T6J6GUAM/carolinacoffeeshop-logo-v1-reverse.png?content-type=image%2Fpng",
     "coverPic": "https://images.squarespace-cdn.com/content/v1/521b6de9e4b03aa034dec5dc/1597009876899-F4NXXL6EYQ153E9VZVG2/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/Front.jpeg?format=1500w",
-    "posts": []
+    "posts": [
+      {
+        "review": "Not great for studying but yummy food!",
+        "noise": "4",
+        "prod": "1",
+        "price": "3",
+        "overall": "2",
+        "date": "2020-11-22T23:01:06.117Z",
+        "secretID": 12,
+        "username": "cxsu"
+      }
+    ]
   }
 }
