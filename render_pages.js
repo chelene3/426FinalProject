@@ -49,7 +49,7 @@ async function getPosts(id){
     let post = location.data.posts;
     let oldPosts = "";
     for(let i=0; i<post.length; i++){
-        oldPosts += `<div class="box">
+        oldPosts += `<div>
             <p>${postify(post[i])}</p>
         </div>`;
     }
