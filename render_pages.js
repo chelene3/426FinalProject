@@ -126,14 +126,14 @@ async function createPost(){
 
 function postify(data){
     let thePost = `<div class="box">
-        <p style="color: #ffc93c">@${data.username}</p>
+        <p style="color: #ffc93c; font-weight: bold;">@${data.username}</p>
         <p style="font-size: 15px;">${data.date}</p>
         <br>
-        <h1>Experience: ${data.review}</h1><br>
-        <span style="font-size: 20px; color: #3282b8;">Noise Rating: ${data.noise}</span><br>
-        <span style="font-size: 20px; color: #3282b8;">Productivity Rating: ${data.prod}</span><br>
-        <span style="font-size: 20px; color: #3282b8;">Price Rating: ${data.price}</span><br>
-        <span style="font-size: 20px; color: #3282b8;">Overall Rating: ${data.overall}</span><br>
+        <span style="font-size: 20px;">Experience: ${data.review}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Noise Rating: ${data.noise}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Productivity Rating: ${data.prod}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Price Rating: ${data.price}</span><br>
+        <span style="font-size: 15px; color: #3282b8;">Overall Rating: ${data.overall}</span><br>
     </div>`;
     return thePost;
 }
