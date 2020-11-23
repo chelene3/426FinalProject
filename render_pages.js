@@ -121,7 +121,7 @@ async function createPost(){
     }catch(err){
         console.error(err);
     }
-    $('#thefeed').append(postify(postObj));
+    $('#thefeed').prepend(postify(postObj));
 }
 
 function postify(data){
