@@ -105,7 +105,7 @@ async function createPost(){
     }catch(err){
         console.error(err);
     }
-    let postObj = {review: review, noise: noise, prod:prod, price: price, overall:overall, date:date, secretID: secretID, username: username};
+    let postObj = {review: review, noise: noise, prod:prod, price: price, overall:overall, date:date.substring(0,10), secretID: secretID, username: username};
   
     location.data.posts.unshift(postObj);
     let newData = location.data;
@@ -122,7 +122,6 @@ async function createPost(){
         console.error(err);
     }
     $('#thefeed').append(postify(postObj));
-    location.reload();
 }
 
 function postify(data){
