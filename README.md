@@ -65,3 +65,78 @@ User Accounts:
 - Save spots
 - History of posts
 - Recommendations based on places visited
+
+
+Backend Documentation:
+
+GET
+./location
+- get
+- returns all location IDS
+
+./location/id
+- get
+- returns specific location object specified by ID
+
+./logout
+- get
+- logs current user out
+
+./user
+-get
+- returns the current user information including saved posts and username
+
+./secret
+- get
+- returns all secret ids related to current logged in user.
+
+./secret/id
+- get
+- returns secret specified by id if it belongs to this user
+
+CREATE
+./location
+- post
+- creates new location object to display and add posts too
+- params : location object {name, address, lat, long,dinein, takeout, indoorseats, outodrrseats, noise, rating, price ,wifi, description, covid, hashtags[], profilPic, coverPic, posts}
+
+./createUser
+-post
+- creates new user
+- params: {username, password}
+
+./secret
+- post
+- creates new secrete
+- params: {username, secret}
+
+POST
+./login
+- post
+- starts user session for user after successful login
+- params: {username, password}
+
+
+UPDATE
+./location/id
+- put
+- update location object (used to update posts)
+- params : updated location object (see create location)
+
+./editUser
+-put
+- updates the user that is currently logged in
+- params: updated user object
+
+./secret/id
+- put
+- updates the secret specified by the ID if the user owns this secret
+
+DELETE
+./location/id
+- delete
+- delete location specified by ID
+
+./secret/id
+- delete
+- delete secret specifed by ID
