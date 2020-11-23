@@ -6,7 +6,12 @@ $(function(){
 
 function addMap(){
     $('#searchMap').remove();
-    let text = $('#searchText').val();
+    let text = "";
+    if($('#searchText').val() == ""){
+      text = "study spots";
+    }
+    else{ text = $('#searchText').val();
+  }
     let map = ` <iframe id="searchMap"
     width="450"
     height="250"
