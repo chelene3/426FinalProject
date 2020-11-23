@@ -1,6 +1,11 @@
 let username = "";
-
+let noise = 0;
+let prod = 0;
+let price = 0;
+let overall = 0;
+let numPosts = 0;
 const location1 = async  (num) =>{
+    let numPosts = 5;
     try{
         const res = await axios({
             method: 'get',
@@ -20,12 +25,26 @@ const location1 = async  (num) =>{
       $('#covid').append(`<p>${res.data.covid}</p>`);
     //   $('#post').on('click', createPost);
         console.log(res);
-      getPosts(num);
+      getPosts(num).then(onfulfilled=> addRatings());
+     
+
     }catch(err){
         console.error(err);
     }
+
+  
 }
 
+function addRatings(){
+    console.log(noise); 
+    if(numPosts == 0){
+        numPosts = 1;
+    }
+    $('#noise').append(`<span>${noise/numPosts}</span>`);
+    $('#prod').append(`<span>${prod/numPosts}</span>`);
+    $('#price').append(`<span>${price/numPosts}</span>`);
+    $('#rate').append(`<span>${overall/numPosts}</span>`);
+}
 // async function getPosts(id){
 //     let location = await axios({
 //         method: 'get',
@@ -52,8 +71,16 @@ async function getPosts(id){
         oldPosts += `<div class="box">
             <p>${postify(post[i])}</p>
         </div>`;
+        console.log(parseInt(post[i].noise));
+        noise += parseInt(post[i].noise);
+        console.log(noise);
+        prod += parseInt(post[i].prod);
+        price += parseInt(post[i].price);
+        overall += parseInt(post[i].overall);
+        numPosts+= 1;
     }
     $("#thefeed").append(oldPosts);
+    return post.length;
 }
 
 async function createPost(){
@@ -137,6 +164,7 @@ function postify(data){
     </div>`;
     return thePost;
 }
+
 // async function createPost(){
 //     // preventDefault();
 //     let id=name;
