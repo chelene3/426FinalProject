@@ -23,14 +23,19 @@ const location1 = async  (num) =>{
       </iframe>`)
       $('#desc').append(`<p>${res.data.des}</p>`);
       $('#covid').append(`<p>${res.data.covid}</p>`);
-      $('#noise').append(`<p>${res.data.noise}</p>`);
-      $('#prod').append(`<p>${res.data.prod}</p>`);
-      $('#price').append(`<p>${res.data.price}</p>`);
-      let average = Math.round((res.data.noise +res.data.prod + res.data.price)/3);
-      $('#rate').append(`<p>${average}</p>`);
+    //   $('#noise').append(`<p>${res.data.noise}</p>`);
+    //   $('#prod').append(`<p>${res.data.prod}</p>`);
+    //   $('#price').append(`<p>${res.data.price}</p>`);
+    //   let average = Math.round((res.data.noise +res.data.prod + res.data.price)/3);
+    //   $('#rate').append(`<p>${average}</p>`);
 
     //   $('#post').on('click', createPost);
         console.log(res);
+        noise =0;
+        prod = 0;
+        price = 0;
+        overall = 0;
+        numPosts =0;
       getPosts(num).then(onfulfilled=> addRatings());
      
 
@@ -46,10 +51,10 @@ function addRatings(){
     if(numPosts == 0){
         numPosts = 1;
     }
-    $('#noise').append(`<span>${noise/numPosts}</span>`);
-    $('#prod').append(`<span>${prod/numPosts}</span>`);
-    $('#price').append(`<span>${price/numPosts}</span>`);
-    $('#rate').append(`<span>${overall/numPosts}</span>`);
+    $('#noise').append(`<span>${(noise/numPosts).toFixed(2)}</span>`);
+    $('#prod').append(`<span>${(prod/numPosts).toFixed(2)}</span>`);
+    $('#price').append(`<span>${(price/numPosts).toFixed(2)}</span>`);
+    $('#rate').append(`<span>${(overall/numPosts).toFixed(2)}</span>`);
 }
 // async function getPosts(id){
 //     let location = await axios({

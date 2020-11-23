@@ -66,7 +66,7 @@ async function getLocationIDs(){
         withCredentials: true
 
     });
-    alert(userResult.data.location);
+    // alert(userResult.data.location);
     userResult.data.location.forEach(function(id){
         addLocations(id);
     });
