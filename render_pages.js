@@ -1,5 +1,9 @@
 let username = "";
-
+let noise = 0;
+let prod = 0;
+let price = 0;
+let overall = 0;
+let numPosts = 0;
 const location1 = async  (num) =>{
     try{
         const res = await axios({
@@ -21,12 +25,12 @@ const location1 = async  (num) =>{
       
     //   $('#post').on('click', createPost);
         console.log(res);
-        noise =0;
+        noise = 0;
         prod = 0;
         price = 0;
         overall = 0;
         numPosts =0;
-        getPosts(num).then(onfulfilled=> addRatings());
+        getPosts(num).then(onfulfilled => addRatings());
     }catch(err){
         console.error(err);
     }
