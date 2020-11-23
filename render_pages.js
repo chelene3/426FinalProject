@@ -73,6 +73,13 @@ async function getPosts(id){
         oldPosts += `<div>
             <p>${postify(post[i])}</p>
         </div>`;
+        console.log(parseInt(post[i].noise));
+        noise += parseInt(post[i].noise);
+        console.log(noise);
+        prod += parseInt(post[i].prod);
+        price += parseInt(post[i].price);
+        overall += parseInt(post[i].overall);
+        numPosts+= 1;
     }
     $("#thefeed").append(oldPosts);
 }
